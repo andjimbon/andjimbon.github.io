@@ -2,15 +2,16 @@
 
 ---
 
-### Category Name 1 
+### Python Projects 
 
 [Price of Books in Colombian Market](https://github.com/andjimbon/Scraping-Project-Price-of-Books/blob/master/Scraping%20Project%20-%20LibreriadelaU.ipynb)
 <img src="images/Distribution.JPG?raw=true"/>
 <img src="images/Category.PNG?raw=true"/>
 
 ---
-[Project 2 Title](/pdf/sample_presentation.pdf)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
+[Scraping Properties Mercadolibre](https://github.com/andjimbon/Mercadolibre-Property-Scrapy-Project/blob/master/Meli%20Property/property_meli.py)
+<img src="images/Table1.PNG?raw=true"/>
+<img src="images/Location.PNG?raw=true"/>
 
 ---
 [Project 3 Title](http://example.com/)
