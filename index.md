@@ -4,7 +4,7 @@
 
 ### Category Name 1 
 
-[Project 1 Title](/sample_page)
+[Project 1 Title](https://github.com/andjimbon/Scraping-Project-Price-of-Books/blob/master/Scraping%20Project%20-%20LibreriadelaU.ipynb)
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ---
