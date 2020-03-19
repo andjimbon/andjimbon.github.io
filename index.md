@@ -4,8 +4,9 @@
 
 ### Category Name 1 
 
-[Project 1 Title](https://github.com/andjimbon/Scraping-Project-Price-of-Books/blob/master/Scraping%20Project%20-%20LibreriadelaU.ipynb)
-<img src="images/Distribution.jpg?raw=true"/>
+[Price of Books in Colombian Market](https://github.com/andjimbon/Scraping-Project-Price-of-Books/blob/master/Scraping%20Project%20-%20LibreriadelaU.ipynb)
+<img src="images/Distribution.JPG?raw=true"/>
+<img src="images/Category.PNG?raw=true"/>
 
 ---
 [Project 2 Title](/pdf/sample_presentation.pdf)
