@@ -12,7 +12,7 @@
 ---
 [Scraping Properties Mercadolibre](https://github.com/andjimbon/Mercadolibre-Property-Scrapy-Project/blob/master/Meli%20Property/property_meli.py)
 
-<img src="images/Table1.PNG?raw=true"/>
+<img src="images/Table.PNG?raw=true"/>
 <img src="images/Location.PNG?raw=true"/>
 
 ---
