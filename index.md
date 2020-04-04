@@ -4,7 +4,7 @@
 
 ### Python Projects 
 
-[Price of Books in Colombian Market](https://github.com/andjimbon/Scraping-Project-Price-of-Books/blob/master/Scraping%20Project%20-%20LibreriadelaU.ipynb)
+[## Price of Books in Colombian Market](https://github.com/andjimbon/Scraping-Project-Price-of-Books/blob/master/Scraping%20Project%20-%20LibreriadelaU.ipynb)
 
 <img src="images/Distribution.JPG?raw=true"/>
 
