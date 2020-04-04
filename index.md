@@ -6,6 +6,8 @@
 
 [Price of Books in Colombian Market](https://github.com/andjimbon/Scraping-Project-Price-of-Books/blob/master/Scraping%20Project%20-%20LibreriadelaU.ipynb)
 
+<p style="font-size:11px">Page template forked from <a href="https://github.com/evanca/quick-portfolio">evanca</a></p>
+
 <img src="images/Distribution.JPG?raw=true"/>
 
 ---
