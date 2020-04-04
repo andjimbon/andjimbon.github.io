@@ -4,9 +4,9 @@
 
 ### Python Projects 
 
-[1. Price of Books in Colombian Market](/sample_page.md)
+[1. Price of Books in Colombian Market](/Price of books Project Description.md)
 
-<p style="font-size:11px">Ingresa al código <a href="https://github.com/andjimbon/Scraping-Project-Price-of-Books/blob/master/Scraping%20Project%20-%20LibreriadelaU.ipynb">acá</a></p>
+<p style="font-size:11px">Mira al código <a href="https://github.com/andjimbon/Scraping-Project-Price-of-Books/blob/master/Scraping%20Project%20-%20LibreriadelaU.ipynb">acá</a></p>
 
 <img src="images/Distribution.JPG?raw=true"/>
 
