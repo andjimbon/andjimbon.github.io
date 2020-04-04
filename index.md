@@ -11,7 +11,7 @@
 <img src="images/Distribution.JPG?raw=true"/>
 
 ---
-[2. Scraping Properties Mercadolibre Colombia](/Properties_MELI_Project_Description.md)
+[2. Real Estate Prices in Colombia](/Properties_MELI_Project_Description.md)
 <p style="font-size:12px">Code <a href="https://github.com/andjimbon/Mercadolibre-Property-Scrapy-Project/blob/master/Meli%20Property/property_meli.py">Here</a></p>
 
 <img src="images/Directions.PNG?raw=true"/>
@@ -22,7 +22,7 @@
 <img src="images/Chart.png?raw=true"/>
 
 ---
-[4. Price Intelligence Mercadolibre Colombia](https://github.com/andjimbon/Mercadolibre-Tucarro-Project/blob/master/script-publication-series.ipynb)
+[4. Prodcut Price Intelligence](https://github.com/andjimbon/Mercadolibre-Tucarro-Project/blob/master/script-publication-series.ipynb)
 
 <img src="images/Price.png?raw=true"/>
 
