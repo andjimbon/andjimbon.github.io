@@ -26,7 +26,7 @@ try:
                    ...
 ```
 
-### 1. Loading data in Pandas
+### 2. Loading data in Pandas
 
 Load data into a structured table
 
@@ -36,9 +36,9 @@ df=f.transpose()
 df.columns=['Autor','Editorial','Edicion','Paginas','ISBN','Tipo','Formato','Titulo','Categoria','Precio','File','Size-MB','Peso','Tamaño','Acabado','Link']
 ```
 
-### 1. Data Analysis
+### 3. Data Analysis
 
-With the price of the books, we can plot a Distributionn price and plot the price by Category of books:
+With the price of the books, we can plot a distribution price and plot the price of books by category:
 
 <img src="images/Distribution.JPG?raw=true"/>
 
