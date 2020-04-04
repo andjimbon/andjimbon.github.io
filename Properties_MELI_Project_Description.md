@@ -1,4 +1,4 @@
-## Real state Market in Colombia
+## Real Estate Market in Colombia
 
 **Project description:** With this code you will be abble to compare market prices (sell/rent) from diferent neighboorhoods or cities in Colombia, and get the information from each property publication (Rooms, bathrooms, M2, House Expenses, etc.)
 
@@ -34,7 +34,7 @@ Once finished the process, you'll receive and email with the stats:
 
 ### 4. Table
 
-Here is an example that shows the structured data:
+[Here ](https://www.dropbox.com/s/83q7mc0n3eodb1n/Base_Datos_ejemplo.xlsx?dl=0)is an example that shows the structured data
 
 <img src="images/Table.png?raw=true"/>
 
