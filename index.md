@@ -7,27 +7,17 @@
 [Price of Books in Colombian Market](https://github.com/andjimbon/Scraping-Project-Price-of-Books/blob/master/Scraping%20Project%20-%20LibreriadelaU.ipynb)
 
 <img src="images/Distribution.JPG?raw=true"/>
-<img src="images/Category.PNG?raw=true"/>
 
 ---
-[Scraping Properties Mercadolibre](https://github.com/andjimbon/Mercadolibre-Property-Scrapy-Project/blob/master/Meli%20Property/property_meli.py)
+[Scraping Properties Mercadolibre Colombia](https://github.com/andjimbon/Mercadolibre-Property-Scrapy-Project/blob/master/Meli%20Property/property_meli.py)
 
-<img src="images/Table.PNG?raw=true"/>
 <img src="images/Location.PNG?raw=true"/>
 
 ---
-[Project 3 Title](http://example.com/)
+[Real Time Bond Prices - InvertirOnline ](https://github.com/andjimbon/Invertiroline-prices-real-time/blob/master/Chart%20bond%20prices%20-%20Invertironline.ipynb)
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ---
-
-### Category Name 2
-
-- [Project 1 Title](http://example.com/)
-- [Project 2 Title](http://example.com/)
-- [Project 3 Title](http://example.com/)
-- [Project 4 Title](http://example.com/)
-- [Project 5 Title](http://example.com/)
 
 ---
 
