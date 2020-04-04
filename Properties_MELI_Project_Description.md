@@ -30,9 +30,15 @@ Run the script and automatically the file will be save in the folder where the s
 ```
 Once finished the process, you'll receive and email with the stats:
 
-<img src="images/scrape.PNG?raw=true"/>
+Global Stats | 
+------------ | -------------
+start_time | 2020-01-05 23:44:09.213644
+item_scraped_count | 329311
+elapsed_time_seconds | 3853.932806
+finish_time | 2020-01-06 10:28:23.146450
+finish_reason | finished
 
-### 4. Table
+### 3. Table
 
 [Here ](https://www.dropbox.com/s/83q7mc0n3eodb1n/Base_Datos_ejemplo.xlsx?dl=0)is an example that shows the structured data
 
