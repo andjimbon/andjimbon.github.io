@@ -40,6 +40,6 @@ df.columns=['Autor','Editorial','Edicion','Paginas','ISBN','Tipo','Formato','Tit
 
 With the price of the books, we can plot a Distributionn price and plot the price by Category of books:
 
-<img src="images/Distribution.PNG?raw=true"/>
+<img src="images/Distribution.JPG?raw=true"/>
 
 <img src="images/Category.PNG?raw=true"/>
