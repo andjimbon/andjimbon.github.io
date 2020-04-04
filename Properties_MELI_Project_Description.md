@@ -38,6 +38,7 @@ elapsed_time_seconds | 3853.932806
 finish_time | 2020-01-06 10:28:23.146450
 finish_reason | finished
 
+
 ### 3. Table
 
 [Here ](https://www.dropbox.com/s/83q7mc0n3eodb1n/Base_Datos_ejemplo.xlsx?dl=0)is an example that shows the structured data
