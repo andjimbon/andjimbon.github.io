@@ -38,6 +38,8 @@ df.columns=['Autor','Editorial','Edicion','Paginas','ISBN','Tipo','Formato','Tit
 
 ### 1. Data Analysis
 
-Here is an example what you can do with Pandas:
+With the price of the books, we can plot a Distributionn price and plot the price by Category of books:
+
+<img src="images/Distribution.PNG?raw=true"/>
 
 <img src="images/Category.PNG?raw=true"/>
