@@ -1,35 +1,40 @@
-## Creating a structured table from Mercadolibre publications
+## Real state Market in Colombia
 
-**Project description:** The main objective of this project, is to calculate the average price of new printed books and ebooks in Colombia. To do so, it takes as reference one of the best library online in Colombia - [Libreria de la U](https://www.libreriadelau.com/)- to scrape thousends of book items.
+**Project description:** With this code you will be abble to compare market prices (sell/rent) from diferent neighboorhoods or cities in Colombia, and get the information from each publication (Rooms, bathrooms, M2, House Expenses, etc.)
 
-Scraping Date: March 2020
+Scrape data from [Mercadolibre](https://www.mercadolibre.com.co/inmuebles) and create a database with property items and their Google geogrpahical location. 
 
-### 1. Pagination
 
-This website doesn't have pagination, instead it has a button at the end of the page to load new items. To scrape the book items, we need to load the data into a json format and iterate over it.
+### 1. Define locations
+
+Enter the link locations inside the "start_request" function by filtering in the web page 
 
 ```javascript
-try:
-            data = json.loads(response.text)
-        
-            if len(data)==0:
-                pass
-
-            else:
-                for i in data:
-                    try: autor.append(i['Autor'][0])
-                    except Exception: autor.append(None)
-
-                    try: editorial.append(i['Editorial'][0])
-                    except Exception: editorial.append(None)
-                    
-                   ...
+def start_requests(self):
+        yield scrapy.Request(
+            'https://listado.mercadolibre.com.co/inmuebles/apartamentos/venta/bogota-dc/suba/acacias/_DisplayType_LF',
+            self.parse)
 ```
 
-### 1. Data Analysis
+### 2. Run Spider
 
-With the price of the books, we can plot a Distributionn price and plot the price by Category of books:
+Run the script and automatically the file will be save in the folder where the script is. Modify the file's name in the "custom_settings":
 
-<img src="images/Distribution.JPG?raw=true"/>
+```javascript
+ custom_settings = {
+        'FEED_URI': 'inmuebles_' + str(datetime.today().strftime('%Y-%m-%d')) + '.csv',
+        'FEED_FORMAT': 'csv',
+        'FEED_EXPORTERS': {
+            'json': 'scrapy.exporters.CsvItemExporter',
+        }
+```
+Once finished the process, you'll receive and email with the stats:
 
-<img src="images/Category.PNG?raw=true"/>
+<img src="images/Scrape.PNG?raw=true"/>
+
+### 4. Table
+
+Here is an example that shows the structured data:
+
+<img src="images/Table.PNG?raw=true"/>
+
