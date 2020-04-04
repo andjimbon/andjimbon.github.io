@@ -1,6 +1,6 @@
 ## Real state Market in Colombia
 
-**Project description:** With this code you will be abble to compare market prices (sell/rent) from diferent neighboorhoods or cities in Colombia, and get the information from each publication (Rooms, bathrooms, M2, House Expenses, etc.)
+**Project description:** With this code you will be abble to compare market prices (sell/rent) from diferent neighboorhoods or cities in Colombia, and get the information from each property publication (Rooms, bathrooms, M2, House Expenses, etc.)
 
 Scrape data from [Mercadolibre](https://www.mercadolibre.com.co/inmuebles) and create a database with property items and their Google geogrpahical location. 
 
@@ -30,11 +30,11 @@ Run the script and automatically the file will be save in the folder where the s
 ```
 Once finished the process, you'll receive and email with the stats:
 
-<img src="images/Scrape.PNG?raw=true"/>
+<img src="images/scrape.PNG?raw=true"/>
 
 ### 4. Table
 
 Here is an example that shows the structured data:
 
-<img src="images/Table.PNG?raw=true"/>
+<img src="images/Table.png?raw=true"/>
 
