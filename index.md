@@ -11,11 +11,11 @@
 ---
 [Scraping Properties Mercadolibre Colombia](https://github.com/andjimbon/Mercadolibre-Property-Scrapy-Project/blob/master/Meli%20Property/property_meli.py)
 
-<img src="images/Location.PNG?raw=true"/>
+<img src="images/Directions.PNG?raw=true"/>
 
 ---
 [Real Time Bond Prices - InvertirOnline ](https://github.com/andjimbon/Invertiroline-prices-real-time/blob/master/Chart%20bond%20prices%20-%20Invertironline.ipynb)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
+<img src="images/chart.png?raw=true"/>
 
 ---
 
