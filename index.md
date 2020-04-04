@@ -14,10 +14,12 @@
 <img src="images/Directions.PNG?raw=true"/>
 
 ---
-[Real Time Bond Prices - InvertirOnline ](https://github.com/andjimbon/Invertiroline-prices-real-time/blob/master/Chart%20bond%20prices%20-%20Invertironline.ipynb)
+[Real Time Bond Prices - InvertirOnline](https://github.com/andjimbon/Invertiroline-prices-real-time/blob/master/Chart%20bond%20prices%20-%20Invertironline.ipynb)
 <img src="images/chart.png?raw=true"/>
 
 ---
+[Price variations in Mercadolibre Publications](https://github.com/andjimbon/Mercadolibre-Tucarro-Project/blob/master/script-publication-series.ipynb)
+
 
 ---
 
