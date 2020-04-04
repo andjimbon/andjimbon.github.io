@@ -36,5 +36,5 @@ Once finished the process, you'll receive and email with the stats:
 
 [Here ](https://www.dropbox.com/s/83q7mc0n3eodb1n/Base_Datos_ejemplo.xlsx?dl=0)is an example that shows the structured data
 
-<img src="images/Table.png?raw=true"/>
+<img src="images/Table.PNG?raw=true"/>
 
