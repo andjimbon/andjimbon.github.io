@@ -7,7 +7,7 @@ Note:
 The script assumes that there are two files (Table1, Table2) containing scraped data from the two previous days (n-1, n-2)
 
 
-# 1.  Mergin' Tables
+# 1.  Merge Tables
 
 To calculate variations in the price of the product, it's necessary to merge the previous crawled tables and create new fields
 
@@ -41,7 +41,7 @@ To calculate variations in the price of the product, it's necessary to merge the
 
 # 2. Conditional executing Function 
 
-The script will run the function "first_join" if we just crawled previously twice and without merging any table before that.
+The script will run the function "first_join" if we haven't merging any table before. 
 
 # 3. Final Table
 
