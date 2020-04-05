@@ -23,7 +23,8 @@
 <img src="images/Chart.png?raw=true"/>
 
 ---
-[4. Prodcut Price Intelligence](https://github.com/andjimbon/Mercadolibre-Tucarro-Project/blob/master/script-publication-series.ipynb)
+[4. Prodcut Price Intelligence](/Price_variations_Project_Description.md)
+<p style="font-size:12px">Code <a href="https://github.com/andjimbon/Mercadolibre-Tucarro-Project/blob/master/script-publication-series.ipynb">Here</a></p>
 
 <img src="images/Price.png?raw=true"/>
 
