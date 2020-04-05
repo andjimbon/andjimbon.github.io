@@ -7,7 +7,7 @@ Note:
 The script assumes that there are two files (Table1, Table2) containing scraped data from the two previous days (n-1, n-2)
 
 
-# 1.  Merge Tables
+### 1.  Merge Tables
 
 To calculate variations in the price of the product, it's necessary to merge the previous crawled tables and create new fields
 
@@ -39,11 +39,11 @@ To calculate variations in the price of the product, it's necessary to merge the
     table2_mod['fecha_ult_mod'] = np.datetime64()
 ```
 
-# 2. Conditional executing Function 
+### 2. Conditional executing Function 
 
 The script will run the function "first_join" if we haven't merging any table before. 
 
-# 3. Final Table
+### 3. Final Table
 
 [Here ](https://www.dropbox.com/s/votc015fn0ajr1m/Base_datos_actualizaciones_ejemplo.xlsx?dl=0)is an example that shows the changes in the prices of different products over a period of time.
 
