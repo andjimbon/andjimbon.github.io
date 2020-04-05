@@ -37,7 +37,7 @@ r_ = BeautifulSoup(r.content,'html.parser')
 Iterate over live data to create a table using **list comprehension:**
 
 ```javascript
-#TABLE HEADERS
+# TABLE HEADERS
 table_header = r_.find('table', id='tablaOpsIntrad').find('thead')
 
 t_headers=[]
@@ -56,9 +56,9 @@ for tr in table.find_all('tr'):
     data.append(row_text)
 ```
 
-### 3. Convertin' to Pandas
+### 3. Convertin' data to a Pandas Dataframe
 
-| Precio | Volumen
+| | Precio | Volumen
 ------------ | ------------- | -------------
 16:54 | 2425.0 | 14403
 16:54 | 2424.0| 300
