@@ -1,8 +1,8 @@
 ## Real Estate Market in Colombia
 
-**Project description:** With this code you will be abble to compare market prices (sell/rent) from diferent neighboorhoods or cities in Colombia, and get the information from each property publication (Rooms, bathrooms, M2, House Expenses, etc.)
+**Project description:** With this code you will be abble to compare market prices for sellig or renting properties (Apartments/Houses/Offices) from diferent neighboorhoods or cities in Colombia, and get the information from each property publication (Rooms, bathrooms, M2, House Expenses, etc.)
 
-Scrape data from [Mercadolibre](https://www.mercadolibre.com.co/inmuebles) and create a database with property items and their Google geogrpahical location. 
+This algorithm scrapes data from [Mercadolibre Colombia](https://www.mercadolibre.com.co/inmuebles) and creates a database with property items and their Google geogrpahical location.
 
 
 ### 1. Define locations
