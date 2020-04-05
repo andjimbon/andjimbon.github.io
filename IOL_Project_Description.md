@@ -58,7 +58,7 @@ for tr in table.find_all('tr'):
 
 ### 3. Convertin' data to a Pandas Dataframe
 
-| | Precio | Volumen
+| Hour | Precio | Volumen
 ------------ | ------------- | -------------
 16:54 | 2425.0 | 14403
 16:54 | 2424.0| 300
