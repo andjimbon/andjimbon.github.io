@@ -8,7 +8,7 @@ Scraping Date: March 2020
 
 This website doesn't have pagination, instead it has a button at the end of the page to load new items. To scrape the book items, we need to load the data into a json format and iterate over it.
 
-```javascript
+```python
 try:
             data = json.loads(response.text)
         
@@ -30,7 +30,7 @@ try:
 
 Load data into a structured table
 
-```javascript
+```python
 f = pd.DataFrame(data=[autor,editorial,edicion,pag,ISBN,tipo,formato,titulo,categoria,precio,file,size,peso,tamano,acabado,link], index=None)
 df=f.transpose()
 df.columns=['Autor','Editorial','Edicion','Paginas','ISBN','Tipo','Formato','Titulo','Categoria','Precio','File','Size-MB','Peso','Tamaño','Acabado','Link']
@@ -41,5 +41,34 @@ df.columns=['Autor','Editorial','Edicion','Paginas','ISBN','Tipo','Formato','Tit
 With the price of the books, we can plot a distribution price and plot the price of books by category:
 
 <img src="images/Distribution.JPG?raw=true"/>
+
+```python
+df[impreso].Precio.describe()
+```
+
+------------ | -------------
+count| 82403.000000
+mean | 60440.518901
+std | 35019.842480
+min     |  10100.000000
+25%     |  37200.000000
+50%     |  53300.000000
+75%     |  73000.000000
+max     | 299900.000000
+
+```python
+df[ebook].Precio.describe()
+```
+
+count   |  67213.000000
+mean     | 29784.759258
+std      | 20493.653868
+min      | 10100.000000
+25%      | 17900.000000
+50%      | 26800.000000
+75%      | 35300.000000
+max      | 299900.000000
+
+Price of Books by Category:
 
 <img src="images/Category.PNG?raw=true"/>
