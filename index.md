@@ -17,7 +17,7 @@
 <img src="images/Directions.PNG?raw=true"/>
 
 ---
-[3. Real Time Bond Prices - InvertirOnline]
+[3. Real Time Bond Prices - InvertirOnline](/IOL_Project_Description.md)
 <p style="font-size:12px">Code <a href="https://github.com/andjimbon/Invertiroline-prices-real-time/blob/master/Chart%20bond%20prices%20-%20Invertironline.ipynb">Here</a></p>
 
 <img src="images/Chart.png?raw=true"/>
