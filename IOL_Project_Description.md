@@ -36,7 +36,7 @@ r_ = BeautifulSoup(r.content,'html.parser')
 
 Iterate over live data to create a table using **list comprehension:**
 
-```javascript
+```python
 # TABLE HEADERS
 table_header = r_.find('table', id='tablaOpsIntrad').find('thead')
 
