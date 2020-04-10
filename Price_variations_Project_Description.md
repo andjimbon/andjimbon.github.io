@@ -1,6 +1,6 @@
 ## Price Intelligence with Python and Pandas
 
-<p style="font-size:12px">Click <a href="https://github.com/andjimbon/Mercadolibre-Tucarro-Project/blob/master/script-publication-series.ipynb">Here</a> to see Code</p>
+<p style="font-size:13px">Click <a href="https://github.com/andjimbon/Mercadolibre-Tucarro-Project/blob/master/script-publication-series.ipynb">Here</a> to see Code</p>
 
 **Project description:** With this project you will be able to track Mercadolibre daily publications and identify variations in the price of products.
 
