@@ -111,15 +111,15 @@ wehere:
 
 **Portfolio Expected Return**
 
-![\Large \bar{R}_{port} = \sum_{i=1}^{n}w_ir_i](https://render.githubusercontent.com/render/math?math=%5Clarge%20%5Cbar%7BR%7D_%7Bport%7D%20%3D%20%5Csum_%7Bi%3D1%7D%5E%7Bn%7Dw_ir_i)
+![\arge \bar{R}_{port} = \sum_{i=1}^{n}w_ir_i](https://render.githubusercontent.com/render/math?math=%5Clarge%20%5Cbar%7BR%7D_%7Bport%7D%20%3D%20%5Csum_%7Bi%3D1%7D%5E%7Bn%7Dw_ir_i)
 
 where:
 
-![\Large \bar{R}{port} =](https://render.githubusercontent.com/render/math?math=%5Clarge%20%5Cbar%7BR%7D%7Bport%7D%20%3D) expected return of portfolio
+![\Large \bar{R}_{port} =](https://render.githubusercontent.com/render/math?math=%5CLarge%20%5Cbar%7BR%7D_%7Bport%7D%20%3D) expected return of portfolio
 
 ![\Large \w_{i} =](https://render.githubusercontent.com/render/math?math=%5Cw_%7Bi%7D%20%3D) the proportion, or weights of total funds invested in security i
 
-![\Large r_i =](https://render.githubusercontent.com/render/math?math=%5Clarge%20r_i) expected return for security i
+![\Large r_{i} =](https://render.githubusercontent.com/render/math?math=%5CLarge%20r_%7Bi%7D%20%3D) expected return for security i
 
 <p>&nbsp;</p>
 
@@ -127,15 +127,16 @@ where:
 
 ![\Large SR = \frac{\bar{R}_{port} - Rf}{\sigma_{port}}](https://render.githubusercontent.com/render/math?math=%5Clarge%20SR%20%3D%20%5Cfrac%7B%5Cbar%7BR%7D_%7Bport%7D%20-%20Rf%7D%7B%5Csigma_%7Bport%7D%7D)
 
+------------
 <p>&nbsp;</p>
 
-We will generate **100k** randomly portfolio combinations and we are going to store them in a Python dict:
+With Numpy library we can simple generate **100k** randomly portfolio combinations. The results will store in a Python dict:
 
 ```python
 dict_keys(['Returns', 'Volatility', 'Sharpe Ratio', 'ECO Weight', 'BIC Weight', 'ISA Weight', 'SIS Weight', 'ARG Weight'])
 ```
 
-Then, plot the results:
+Then plot the results:
 
 <img src="images/EF_monte_carlo.png?raw=true"/>
 
