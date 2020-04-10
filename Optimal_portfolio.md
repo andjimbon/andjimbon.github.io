@@ -89,9 +89,11 @@ The **p -values** of the different tests are all zero, strongly rejecting the te
 
 ### Monte Carlo Approach: : Optimal Portfolio
 
-With this method we will try to discover the optimal weights by simply creating a large number of random portfolios, and extract within all these randomly portfolios the one who has the maximum sharpe Ratio (Optimal Portfolio) and in the other hand, the one who has the minimun variance (Minimun Variance Portfolio). For sharpe ratio calculations we set a risk free = 0
+With this method we will try to discover the optimal weights by simply creating a large number of random portfolios, and extract within all these randomly portfolios the one who has the maximum sharpe Ratio (Optimal Portfolio) and in the other hand, the one who has the minimun variance (Minimun Variance Portfolio). For sharpe ratio calculations we set a *risk free = 0.
 
 Before to do that, we will review some formulas: 
+
+-----
 
 **Portfolio Standard Deviation**
 
@@ -111,15 +113,15 @@ wehere:
 
 **Portfolio Expected Return**
 
-![\arge \bar{R}_{port} = \sum_{i=1}^{n}w_ir_i](https://render.githubusercontent.com/render/math?math=%5Clarge%20%5Cbar%7BR%7D_%7Bport%7D%20%3D%20%5Csum_%7Bi%3D1%7D%5E%7Bn%7Dw_ir_i)
+![\Large \bar{R}_{port} = \sum_{i=1}^{n}w_ir_i](https://render.githubusercontent.com/render/math?math=%5Clarge%20%5Cbar%7BR%7D_%7Bport%7D%20%3D%20%5Csum_%7Bi%3D1%7D%5E%7Bn%7Dw_ir_i)
 
 where:
 
-![\Large \bar{R}_{port} =](https://render.githubusercontent.com/render/math?math=%5CLarge%20%5Cbar%7BR%7D_%7Bport%7D%20%3D) expected return of portfolio
+![\bar{R}_{port} =]](https://render.githubusercontent.com/render/math?math=%5Cbar%7BR%7D_%7Bport%7D%20%3D) expected return of portfolio
 
 ![\Large \w_{i} =](https://render.githubusercontent.com/render/math?math=%5Cw_%7Bi%7D%20%3D) the proportion, or weights of total funds invested in security i
 
-![\Large r_{i} =](https://render.githubusercontent.com/render/math?math=%5CLarge%20r_%7Bi%7D%20%3D) expected return for security i
+![r_i =](https://render.githubusercontent.com/render/math?math=r_i%20%3D) expected return for security i
 
 <p>&nbsp;</p>
 
