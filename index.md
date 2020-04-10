@@ -2,29 +2,36 @@
 
 ---
 
-### Python Projects 
+### Python Projects
 
-[1. Price of Books in Colombian Market](/Price of books Project Description.md)
+[2. Optimal Portfolio](/Price of books Project Description.md)
 
-<p style="font-size:12px">Code <a href="https://github.com/andjimbon/Scraping-Project-Price-of-Books/blob/master/Scraping%20Project%20-%20LibreriadelaU.ipynb">Here</a></p>
+<p style="font-size:13px">Click <a href="https://github.com/andjimbon/Scraping-Project-Price-of-Books/blob/master/Scraping%20Project%20-%20LibreriadelaU.ipynb">Here</a> to see Code</p>
 
 <img src="images/Distribution.JPG?raw=true"/>
 
 ---
-[2. Real Estate Prices in Colombia](/Properties_MELI_Project_Description.md)
-<p style="font-size:12px">Code <a href="https://github.com/andjimbon/Mercadolibre-Property-Scrapy-Project/blob/master/Meli%20Property/property_meli.py">Here</a></p>
+[2. Price of Books in Colombian Market](/Price of books Project Description.md)
+
+<p style="font-size:13px">Click <a href="https://github.com/andjimbon/Scraping-Project-Price-of-Books/blob/master/Scraping%20Project%20-%20LibreriadelaU.ipynb">Here</a> to see Code</p>
+
+<img src="images/Distribution.JPG?raw=true"/>
+
+---
+[3. Real Estate Prices in Colombia](/Properties_MELI_Project_Description.md)
+<p style="font-size:13px">Code <a href="https://github.com/andjimbon/Mercadolibre-Property-Scrapy-Project/blob/master/Meli%20Property/property_meli.py">Here</a> to see Code</p>
 
 <img src="images/Directions.PNG?raw=true"/>
 
 ---
-[3. Real-Time Bond Prices](/IOL_Project_Description.md)
-<p style="font-size:12px">Code <a href="https://github.com/andjimbon/Invertiroline-prices-real-time/blob/master/Chart%20bond%20prices%20-%20Invertironline.ipynb">Here</a></p>
+[4. Real-Time Bond Prices](/IOL_Project_Description.md)
+<p style="font-size:13px">Code <a href="https://github.com/andjimbon/Invertiroline-prices-real-time/blob/master/Chart%20bond%20prices%20-%20Invertironline.ipynb">Here</a> to see Code</p>
 
 <img src="images/Chart.png?raw=true"/>
 
 ---
-[4. Product Price Intelligence](/Price_variations_Project_Description.md)
-<p style="font-size:12px">Code <a href="https://github.com/andjimbon/Mercadolibre-Tucarro-Project/blob/master/script-publication-series.ipynb">Here</a></p>
+[5. Product Price Intelligence](/Price_variations_Project_Description.md)
+<p style="font-size:13px">Click <a href="https://github.com/andjimbon/Mercadolibre-Tucarro-Project/blob/master/script-publication-series.ipynb">Here</a> to see Code</p>
 
 <img src="images/Price.png?raw=true"/>
 
