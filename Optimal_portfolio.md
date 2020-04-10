@@ -30,7 +30,7 @@ Cumulative return shows us that if we were invested 1 monetary unit in ISA in 20
 
 <img src="images/cummulative_ret.png?raw=true"/>
 
-To calculate the monthly realized volatilities for ISA we use daily returns and then annualize the values.
+We can plot the daily returns for ISA and below plot its the daily realized volatility.
 
 The formula for realized volatility is as follows:
 
@@ -38,10 +38,49 @@ The formula for realized volatility is as follows:
 
 Where ![\large r_t =](https://render.githubusercontent.com/render/math?math=%5Clarge%20r_t%20%3D) return at period t
 
-We can plot the daily returns for ISA and below plot its the daily realized volatility.
 The grahp shows us tha the maximum daily volatility for ISA is ![\sigma \approx 1](https://render.githubusercontent.com/render/math?math=%5Csigma%20%5Capprox%201)
 
 <img src="images/ret_vs_vol.png?raw=true"/>
+
+2. ### Log Return Distributions and Correlation Matrix
+
+Pandas provides us an easy way to plot a scatter matrix and observe the returns distribution for each stock and the correlation between them
+
+<img src="images/matrix.png?raw=true"/>
+
+Selecting two stock we can run an OSL (ordinary least-squares) analysis and then examine the correlation for a fixed window over time.
+
+<img src="images/linear_r.png?raw=true"/>
+
+Window period = 252 days
+
+<img src="images/corr_ot.png?raw=true"/>
+
+
+3. ### Statistics and Normality Tests
+
+<img src="images/qqplot.png?raw=true"/>
+
+
+statistic for Symbol ECO | value
+--- | ---
+size | 1481.000
+min | -0.104
+max | 0.103
+mean | -0.000
+std | 0.020
+skew | -0.097
+kurtosis | 3.276
+
+
+Results for symbol ECO | Value
+------------ | -------------
+Skew of data set | -0.097
+Skew test p-value | 0.126
+Kurt of data set | 3.276
+Kurt test p-value | 0.000
+Norm test p-value | 0.000
+
 
 ```python
 {'ECO': 0.0, 'BIC': 0.43204, 'ISA': 0.56796, 'SIS': 0.0, 'ARG': 0.0} 
@@ -52,7 +91,7 @@ Sharpe Ratio: 0.73
 (0.14406456150209906, 0.19653202475586729, 0.7330335179778285)
 ```
 
-<img src="images/corr_ot.png?raw=true"/>
+
 
 
 ECO|BIC|ISA|SIS|ARG
@@ -63,34 +102,18 @@ ECO|BIC|ISA|SIS|ARG
 
 
 
-<img src="images/matrix.png?raw=true"/>
 
 
 
 
 
-<img src="images/qqplot.png?raw=true"/>
+
+
 
 
 <img src="images/efficient_front.png?raw=true"/>
 
-statistic | value
-- | -
-size | 1481.000
-min | -0.104
-max | 0.103
-mean | -0.000
-std | 0.020
-skew | -0.097
-kurtosis | 3.276
 
-Results for symbol ECO | 
------------- | -------------
-Skew of data set | -0.097
-Skew test p-value | 0.126
-Kurt of data set | 3.276
-Kurt test p-value | 0.000
-Norm test p-value | 0.000
 
 ECO|BIC|ISA|SIS|ARG
 ----- | ----- |----- | ----- |
@@ -112,7 +135,7 @@ Discrete Allocation: {'BIC': 102.0, 'ISA': 301.0}
 Funds Remaining: $12320.00
 ```
 
-<img src="images/linear_r.png?raw=true"/>
+
 
 
 
