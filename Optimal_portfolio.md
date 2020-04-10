@@ -99,7 +99,7 @@ Before to do that, we will review some formulas:
 
 wehere:
 
-![\Large \sigma_{port} =](https://render.githubusercontent.com/render/math?math=%5Csigma_%7Bport%7D%20%3D) the standard deviation of the portfolio
+![\large \sigma_{port} =](https://render.githubusercontent.com/render/math?math=%5Csigma_%7Bport%7D%20%3D) the standard deviation of the portfolio
 
 ![\Large \w_{i} =](https://render.githubusercontent.com/render/math?math=%5Cw_%7Bi%7D%20%3D) the weights of individual assets in the portfolio, where weights are determined by the proportion of value in the portfolio
 
@@ -107,6 +107,7 @@ wehere:
 
 ![\Large \Cov_{ij} =](https://render.githubusercontent.com/render/math?math=%5CCov_%7Bij%7D%20%3D) the variance of rates of return for asset i, where ![\large \Cov_{ij} = r_{ij}\sigma_i\sigma_j](https://render.githubusercontent.com/render/math?math=%5CCov_%7Bij%7D%20%3D%20r_%7Bij%7D%5Csigma_i%5Csigma_j)
 
+<p>&nbsp;</p>
 
 **Portfolio Expected Return**
 
@@ -120,11 +121,13 @@ where:
 
 ![\Large r_i =](https://render.githubusercontent.com/render/math?math=%5Clarge%20r_i) expected return for security i
 
+<p>&nbsp;</p>
 
 **Sharpe Ratio**
 
 ![\Large SR = \frac{\bar{R}_{port} - Rf}{\sigma_{port}}](https://render.githubusercontent.com/render/math?math=%5Clarge%20SR%20%3D%20%5Cfrac%7B%5Cbar%7BR%7D_%7Bport%7D%20-%20Rf%7D%7B%5Csigma_%7Bport%7D%7D)
 
+<p>&nbsp;</p>
 
 We will generate **100k** randomly portfolio combinations and we are going to store them in a Python dict:
 
@@ -261,7 +264,7 @@ Sharpe Ratio: 0.73
 (0.14406456150209906, 0.19653202475586729, 0.7330335179778285)
 ```
 
-If we want invest $10 million COP in this Optimal portfolio, we should buy 102 shares of BIC and 301 shares of ISA, and expect an annual return of 14.4% (Markowitz Theory)
+If we want invest **$10 million COP** in this Optimal portfolio, we should buy 102 shares of BIC and 301 shares of ISA, and expect an annual return of 14.4% (Markowitz Theory)
 
 
 ```python
