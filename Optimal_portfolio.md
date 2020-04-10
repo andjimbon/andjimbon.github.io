@@ -8,15 +8,17 @@ This Project uses the API provided by [Investpy](https://investpy.readthedocs.io
 
 The historical data for U.S Stocks can easily get from Yahoo Finance.
 
-### 1. Historical Data
 
-For the purpose of this project we will get the historical prices from Ecopetrol (ECO), Bancolombia (BIC), Interconnection Electric SA (ISA), Grupo de Inversiones Suramericana (SIS) and Grupo Argos (ARG). The history range for the analysis is from '01/01/2014' to '01/02/2020' ('%d/%m/%Y').
+### Historical Data
+
+For the purpose of this project we will get the historical prices from Ecopetrol (**ECO**), Bancolombia (**BIC**), Interconnection Electric SA (**ISA**), Grupo de Inversiones Suramericana (**SIS**) and Grupo Argos (**ARG**). The history range for the analysis is from **'01/01/2014'** to **'01/02/2020'** ('%d/%m/%Y').
 
 Note: Investpy just let us get the historical price for one stock at a time, so we need to iterate over the ticker list and concatenate dataframes for each stock. The result will be a one dataframe containing the daily close price for each ticker
 
 Date|ECO|BIC|ISA|SIS|ARG
 ----- | ----- |----- | ----- |----- |
 2020-01-31 | 3180.0 | 42440.0 | 18800.0 | 32000.0 | 17480.0
+
 
 ### Plotting useful information
 
@@ -42,25 +44,25 @@ The grahp shows us that the maximum daily volatility for ISA is ![\large sigma \
 
 <img src="images/ret_vs_vol.png?raw=true"/>
 
+
 ### Log Return Distributions and Correlation Matrix
 
 Pandas provides us an easy way to plot a scatter matrix and observe the distribution of returns for each stock and the correlation between them
 
 <img src="images/matrix.png?raw=true"/>
 
-Selecting two stock we can run an OSL (ordinary least-squares) analysis and then examine the correlation for a fixed window over time.
+Selecting two stock we can run an OSL (ordinary least-squares) analysis and then examine the correlation for a fixed window over time (Window period = 252 days.
 
 <img src="images/linear_r.png?raw=true"/>
 
-Window period = 252 days
-Postive corretation over time
+The graph shows postive corretation over time between the two stocks
 
 <img src="images/corr_ot.png?raw=true"/>
-
+ 
 
 ### Statistics and Normality Tests
 
-Next graph shows the QQ plot for ECO. Clearly, the sample quantile values do not lie on a straight line, indicating “non-normality.” On the left and right sides there are many values that lie well below the line and well above the line, respectively. In other words, the time series data exhibits fat tails
+Next graph shows the QQ plot for ECO. Clearly, the sample quantile values do not lie on a straight line, indicating “non-normality.” On the left and right sides there are many values that lie well below the line and well above the line, respectively. In other words, the time series data exhibits fat tails,
 
 <img src="images/qqplot.png?raw=true"/>
 
@@ -74,13 +76,29 @@ Kurt of data set | 3.276
 Kurt test p-value | 0.000
 Norm test p-value | 0.000
 
-The p -values of the different tests are all zero, strongly rejecting the test hypothesis. We might have to use richer models that are able to generate fat tails (e.g., models with stochastic volatility or jump diffusion models).
+The **p -values** of the different tests are all zero, strongly rejecting the test hypothesis. We might have to use richer models that are able to generate fat tails (e.g., models with stochastic volatility or jump diffusion models).
 
 
 ## Opmitization Methods
 
+
 ### Monte Carlo Approach: : Optimal Portfolio
 
+With this method we will try to discover the optimal weights by simply creating a large number of random portfolios, and extract within all these randomly portfolios the one who has the maximum sharpe Ratio (Optimal Portfolio) and in the other hand, the one who has the minimun variance (Minimun Variance Portfolio)
+
+Before to do that, we will refresh some formulas: 
+
+**Portfolio Standard Deviation**
+![\large \sigma_{port} = \sqrt{\sum_{i=1}^{n}w_i^2\sigma_i^2 + \sum_{i=1}^{n}\sum_{i=1}^{n}w_iw_jCov_{ij}}](https://render.githubusercontent.com/render/math?math=%5Csigma_%7Bport%7D%20%3D%20%5Csqrt%7B%5Csum_%7Bi%3D1%7D%5E%7Bn%7Dw_i%5E2%5Csigma_i%5E2%20%2B%20%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%5Csum_%7Bi%3D1%7D%5E%7Bn%7Dw_iw_jCov_%7Bij%7D%7D)
+
+wehere:
+![\large \sigma_{port} =](https://render.githubusercontent.com/render/math?math=%5Csigma_%7Bport%7D%20%3D) the standard deviation of the portfolio
+![\large \w_{i} =](https://render.githubusercontent.com/render/math?math=%5Cw_%7Bi%7D%20%3D) the weights of individual assets in the portfolio, where weights are determined by the proportion of value in the portfolio
+![\large \sigma_i^2 =](https://render.githubusercontent.com/render/math?math=%5Csigma_i%5E2%20%3D) the variance of rates of return for asset i
+![\large \Cov_{ij} =](https://render.githubusercontent.com/render/math?math=%5CCov_%7Bij%7D%20%3D) the variance of rates of return for asset i, where ![\large \Cov_{ij} = r_{ij}\sigma_i\sigma_j](https://render.githubusercontent.com/render/math?math=%5CCov_%7Bij%7D%20%3D%20r_%7Bij%7D%5Csigma_i%5Csigma_j)
+
+
+**Portfolio Expected Return**
 
  ---- | ----
 Returns     |  0.069986
@@ -103,7 +121,9 @@ ISA Weight   | 0.561843
 SIS Weight   | 0.006014
 ARG Weight   | 0.001402
 
+
 <img src="images/EF_monte_carlo.png?raw=true"/>
+
 
 
 ### Linear Programming with Scipy: Optimal Portfolio
@@ -124,6 +144,7 @@ ECO|BIC|ISA|SIS|ARG
 ```python
 array([0.1437 , 0.196  , 0.73318])
 ```
+
 ```python
 array([0.06907, 0.16479, 0.41915])
 ```
