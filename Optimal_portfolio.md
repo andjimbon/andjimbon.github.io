@@ -89,16 +89,32 @@ With this method we will try to discover the optimal weights by simply creating 
 Before to do that, we will refresh some formulas: 
 
 **Portfolio Standard Deviation**
+
 ![\large \sigma_{port} = \sqrt{\sum_{i=1}^{n}w_i^2\sigma_i^2 + \sum_{i=1}^{n}\sum_{i=1}^{n}w_iw_jCov_{ij}}](https://render.githubusercontent.com/render/math?math=%5Csigma_%7Bport%7D%20%3D%20%5Csqrt%7B%5Csum_%7Bi%3D1%7D%5E%7Bn%7Dw_i%5E2%5Csigma_i%5E2%20%2B%20%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%5Csum_%7Bi%3D1%7D%5E%7Bn%7Dw_iw_jCov_%7Bij%7D%7D)
 
 wehere:
+
 ![\large \sigma_{port} =](https://render.githubusercontent.com/render/math?math=%5Csigma_%7Bport%7D%20%3D) the standard deviation of the portfolio
+
 ![\large \w_{i} =](https://render.githubusercontent.com/render/math?math=%5Cw_%7Bi%7D%20%3D) the weights of individual assets in the portfolio, where weights are determined by the proportion of value in the portfolio
+
 ![\large \sigma_i^2 =](https://render.githubusercontent.com/render/math?math=%5Csigma_i%5E2%20%3D) the variance of rates of return for asset i
+
 ![\large \Cov_{ij} =](https://render.githubusercontent.com/render/math?math=%5CCov_%7Bij%7D%20%3D) the variance of rates of return for asset i, where ![\large \Cov_{ij} = r_{ij}\sigma_i\sigma_j](https://render.githubusercontent.com/render/math?math=%5CCov_%7Bij%7D%20%3D%20r_%7Bij%7D%5Csigma_i%5Csigma_j)
 
 
 **Portfolio Expected Return**
+
+![\large \bar{R}_{port} = \sum_{i=1}^{n}w_ir_i](https://render.githubusercontent.com/render/math?math=%5Clarge%20%5Cbar%7BR%7D_%7Bport%7D%20%3D%20%5Csum_%7Bi%3D1%7D%5E%7Bn%7Dw_ir_i)
+
+where:
+
+![\large \bar{R}_{port} =](https://render.githubusercontent.com/render/math?math=%5Clarge%20%5Cbar%7BR%7D_%7Bport%7D%20%3D) expected return of portfolio
+
+![\large \w_{i} =](https://render.githubusercontent.com/render/math?math=%5Cw_%7Bi%7D%20%3D) the proportion, or weights of total funds invested in security i
+
+![\large r_i =](https://render.githubusercontent.com/render/math?math=%5Clarge%20r_i) expected return for security i
+
 
  ---- | ----
 Returns     |  0.069986
