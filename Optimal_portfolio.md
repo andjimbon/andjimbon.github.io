@@ -30,7 +30,7 @@ Cumulative return shows us that if we were invested 1 monetary unit in ISA in 20
 
 <img src="images/cummulative_ret.png?raw=true"/>
 
-We can plot the daily returns for ISA and below plot its the daily realized volatility.
+We can plot the daily returns for ISA and below plot its daily realized volatility.
 
 The formula for realized volatility is as follows:
 
@@ -38,13 +38,13 @@ The formula for realized volatility is as follows:
 
 Where ![\large r_t =](https://render.githubusercontent.com/render/math?math=%5Clarge%20r_t%20%3D) return at period t
 
-The grahp shows us tha the maximum daily volatility for ISA is ![\sigma \approx 1](https://render.githubusercontent.com/render/math?math=%5Csigma%20%5Capprox%201)
+The grahp shows us that the maximum daily volatility for ISA is ![\large sigma \approx 1](https://render.githubusercontent.com/render/math?math=%5Csigma%20%5Capprox%201)
 
 <img src="images/ret_vs_vol.png?raw=true"/>
 
-2. ### Log Return Distributions and Correlation Matrix
+### Log Return Distributions and Correlation Matrix
 
-Pandas provides us an easy way to plot a scatter matrix and observe the returns distribution for each stock and the correlation between them
+Pandas provides us an easy way to plot a scatter matrix and observe the distribution of returns for each stock and the correlation between them
 
 <img src="images/matrix.png?raw=true"/>
 
@@ -53,25 +53,18 @@ Selecting two stock we can run an OSL (ordinary least-squares) analysis and then
 <img src="images/linear_r.png?raw=true"/>
 
 Window period = 252 days
+Postive corretation over time
 
 <img src="images/corr_ot.png?raw=true"/>
 
 
-3. ### Statistics and Normality Tests
+### Statistics and Normality Tests
+
+Next graph shows the QQ plot for ECO. Clearly, the sample quantile values do not lie on a straight line, indicating “non-normality.” On the left and right sides there are many values that lie well below the line and well above the line, respectively. In other words, the time series data exhibits fat tails
 
 <img src="images/qqplot.png?raw=true"/>
 
-
-statistic for Symbol ECO | value
---- | ---
-size | 1481.000
-min | -0.104
-max | 0.103
-mean | -0.000
-std | 0.020
-skew | -0.097
-kurtosis | 3.276
-
+We can run a few statistics to validate the hypothesis that the sample data are normally distributed.
 
 Results for symbol ECO | Value
 ------------ | -------------
@@ -81,62 +74,12 @@ Kurt of data set | 3.276
 Kurt test p-value | 0.000
 Norm test p-value | 0.000
 
-
-```python
-{'ECO': 0.0, 'BIC': 0.43204, 'ISA': 0.56796, 'SIS': 0.0, 'ARG': 0.0} 
-
-Expected annual return: 14.4%
-Annual volatility: 19.7%
-Sharpe Ratio: 0.73
-(0.14406456150209906, 0.19653202475586729, 0.7330335179778285)
-```
+The p -values of the different tests are all zero, strongly rejecting the test hypothesis. We might have to use richer models that are able to generate fat tails (e.g., models with stochastic volatility or jump diffusion models).
 
 
+## Opmitization Methods
 
-
-ECO|BIC|ISA|SIS|ARG
------ | ----- |----- | ----- |
-0.09 |0.24|0.19|0.34|0.14
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<img src="images/efficient_front.png?raw=true"/>
-
-
-
-ECO|BIC|ISA|SIS|ARG
------ | ----- |----- | ----- |
-0.0 |0.4454|0.5546|0.0|0.0
-
-
-Date|ECO|BIC|ISA|SIS|ARG
------ | ----- |----- | ----- |----- |
-2020-01-31 | 3180.0 | 42440.0 | 18800.0 | 32000.0 | 17480.0
-
-```python
-array([0.1437 , 0.196  , 0.73318])
-```
-```python
-array([0.06907, 0.16479, 0.41915])
-```
-```python
-Discrete Allocation: {'BIC': 102.0, 'ISA': 301.0}
-Funds Remaining: $12320.00
-```
-
-
-
+### Monte Carlo Approach: : Optimal Portfolio
 
 
  ---- | ----
@@ -160,4 +103,48 @@ ISA Weight   | 0.561843
 SIS Weight   | 0.006014
 ARG Weight   | 0.001402
 
+<img src="images/EF_monte_carlo.png?raw=true"/>
 
+
+### Linear Programming with Scipy: Optimal Portfolio
+
+
+
+ECO|BIC|ISA|SIS|ARG
+----- | ----- |----- | ----- |
+0.09 |0.24|0.19|0.34|0.14
+
+
+ECO|BIC|ISA|SIS|ARG
+----- | ----- |----- | ----- |
+0.0 |0.4454|0.5546|0.0|0.0
+
+
+
+```python
+array([0.1437 , 0.196  , 0.73318])
+```
+```python
+array([0.06907, 0.16479, 0.41915])
+```
+
+<img src="images/efficient_front.png?raw=true"/>
+
+
+## PyPortfolioOpt Library
+
+
+```python
+{'ECO': 0.0, 'BIC': 0.43204, 'ISA': 0.56796, 'SIS': 0.0, 'ARG': 0.0} 
+
+Expected annual return: 14.4%
+Annual volatility: 19.7%
+Sharpe Ratio: 0.73
+(0.14406456150209906, 0.19653202475586729, 0.7330335179778285)
+```
+
+
+```python
+Discrete Allocation: {'BIC': 102.0, 'ISA': 301.0}
+Funds Remaining: $12320.00
+```
