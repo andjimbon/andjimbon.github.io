@@ -8,6 +8,36 @@ With the API provided by [Investpy](https://investpy.readthedocs.io/index.html) 
 
 ### 1. Historical Data
 
+Date|ECO|BIC|ISA|SIS|ARG
+----- | ----- |----- | ----- |----- |
+2020-01-31 | 3180.0 | 42440.0 | 18800.0 | 32000.0 | 17480.0
+
+```python
+{'ECO': 0.0, 'BIC': 0.43204, 'ISA': 0.56796, 'SIS': 0.0, 'ARG': 0.0} 
+
+Expected annual return: 14.4%
+Annual volatility: 19.7%
+Sharpe Ratio: 0.73
+(0.14406456150209906, 0.19653202475586729, 0.7330335179778285)
+```
+
+<img src="images/corr_ot.png?raw=true"/>
+
+
+
+Results for symbol ECO|
+------------ | -------------
+Skew of data set | -0.097
+Skew test p-value | 0.126
+Kurt of data set | 3.276
+Kurt test p-value | 0.000
+Norm test p-value | 0.000
+
+ECO|BIC|ISA|SIS|ARG
+----- | ----- |----- | ----- |
+0.09 |0.24|0.19|0.34|0.14
+
+
 <img src="images/stock_price.png?raw=true"/>
 
 
