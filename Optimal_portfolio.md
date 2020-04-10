@@ -25,7 +25,7 @@ Sharpe Ratio: 0.73
 
 
 
-Results for symbol ECO|
+Results for symbol ECO | 
 ------------ | -------------
 Skew of data set | -0.097
 Skew test p-value | 0.126
@@ -79,5 +79,46 @@ Norm test p-value | 0.000
 ECO|BIC|ISA|SIS|ARG
 ----- | ----- |----- | ----- |
 0.0 |0.4454|0.5546|0.0|0.0
+
+
+Date|ECO|BIC|ISA|SIS|ARG
+----- | ----- |----- | ----- |----- |
+2020-01-31 | 3180.0 | 42440.0 | 18800.0 | 32000.0 | 17480.0
+
+```python
+array([0.1437 , 0.196  , 0.73318])
+```
+```python
+array([0.06907, 0.16479, 0.41915])
+```
+```python
+Discrete Allocation: {'BIC': 102.0, 'ISA': 301.0}
+Funds Remaining: $12320.00
+```
+
+<img src="images/liner_r.png?raw=true"/>
+
+
+
+ ---- | ----
+Returns     |  0.069986
+Volatility   | 0.164826
+Sharpe Ratio | 0.424605
+ECO Weight   | 0.078844
+BIC Weight   | 0.240285
+ISA Weight   | 0.204278
+SIS Weight   | 0.348250
+ARG Weight   | 0.128342 
+
+
+ ---- | ----      
+Returns      | 0.140984
+Volatility   | 0.194283
+Sharpe Ratio | 0.725665
+ECO Weight   | 0.020040
+BIC Weight   | 0.410700
+ISA Weight   | 0.561843
+SIS Weight   | 0.006014
+ARG Weight   | 0.001402
 
 
