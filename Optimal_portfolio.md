@@ -32,7 +32,8 @@ Cumulative return shows us that if we were invested 1 monetary unit in ISA in 20
 
 To calculate the monthly realized volatilities for ISA we use daily returns and then annualize the values.
 The formula for realized volatility is as follows:
- RV \equiv \sqrt{\sum_{i=1}^{T} r_t^2}
+![RV \equiv \sqrt{\sum_{i=1}^{T} r_t^2}](https://render.githubusercontent.com/render/math?math=RV%20%5Cequiv%20%5Csqrt%7B%5Csum_%7Bi%3D1%7D%5E%7BT%7D%20r_t%5E2%7D)
+
  Where r_t \equiv return at period t
 
 <img src="images/ret_vs_vol.png?raw=true"/>
