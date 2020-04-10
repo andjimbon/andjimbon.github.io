@@ -51,7 +51,7 @@ Pandas provides us an easy way to plot a scatter matrix and observe the distribu
 
 <img src="images/matrix.png?raw=true"/>
 
-Selecting two stock we can run an OSL (ordinary least-squares) analysis and then examine the correlation for a fixed window over time (Window period = 252 days.
+Selecting two stock we can run an OSL (ordinary least-squares) analysis and then examine the correlation for a fixed window over time (Window period = 252 days).
 
 <img src="images/linear_r.png?raw=true"/>
 
@@ -86,11 +86,11 @@ The **p -values** of the different tests are all zero, strongly rejecting the te
 
 With this method we will try to discover the optimal weights by simply creating a large number of random portfolios, and extract within all these randomly portfolios the one who has the maximum sharpe Ratio (Optimal Portfolio) and in the other hand, the one who has the minimun variance (Minimun Variance Portfolio)
 
-Before to do that, we will refresh some formulas: 
+Before to do that, we will review some formulas: 
 
 **Portfolio Standard Deviation**
 
-![\large \sigma_{port} = \sqrt{\sum_{i=1}^{n}w_i^2\sigma_i^2 + \sum_{i=1}^{n}\sum_{i=1}^{n}w_iw_jCov_{ij}}](https://render.githubusercontent.com/render/math?math=%5Csigma_%7Bport%7D%20%3D%20%5Csqrt%7B%5Csum_%7Bi%3D1%7D%5E%7Bn%7Dw_i%5E2%5Csigma_i%5E2%20%2B%20%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%5Csum_%7Bi%3D1%7D%5E%7Bn%7Dw_iw_jCov_%7Bij%7D%7D)
+![\Large \sigma_{port} = \sqrt{\sum_{i=1}^{n}w_i^2\sigma_i^2 + \sum_{i=1}^{n}\sum_{i=1}^{n}w_iw_jCov_{ij}}](https://render.githubusercontent.com/render/math?math=%5Csigma_%7Bport%7D%20%3D%20%5Csqrt%7B%5Csum_%7Bi%3D1%7D%5E%7Bn%7Dw_i%5E2%5Csigma_i%5E2%20%2B%20%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%5Csum_%7Bi%3D1%7D%5E%7Bn%7Dw_iw_jCov_%7Bij%7D%7D)
 
 wehere:
 
@@ -118,7 +118,8 @@ where:
 
 **Sharpe Ratio**
 
-![\large SR = \frac{\bar{R}_{port} - Rf}{\sigma_{port}}](https://render.githubusercontent.com/render/math?math=%5Clarge%20SR%20%3D%20%5Cfrac%7B%5Cbar%7BR%7D_%7Bport%7D%20-%20Rf%7D%7B%5Csigma_%7Bport%7D%7D)
+![\Large SR = \frac{\bar{R}_{port} - Rf}{\sigma_{port}}](https://render.githubusercontent.com/render/math?math=%5Clarge%20SR%20%3D%20%5Cfrac%7B%5Cbar%7BR%7D_%7Bport%7D%20-%20Rf%7D%7B%5Csigma_%7Bport%7D%7D)
+
 
 We will generate **100k** randomly portfolio combinations and we are going to store them in a Python dict:
 
@@ -131,7 +132,7 @@ Then, plot the results:
 <img src="images/EF_monte_carlo.png?raw=true"/>
 
 
-The red star is the portfolio with the lowest sharpe ratio. Here the composition:
+The red star is the portfolio with the lowest sharpe ratio. Here the portfolio composition:
 
  ---- | ----
 Return     |  0.069986
@@ -143,7 +144,7 @@ ISA Weight   | 0.204278
 SIS Weight   | 0.348250
 ARG Weight   | 0.128342 
 
-The yellow star is the portfolio with the highest sharpe ratio. Here the composition:
+The yellow star is the portfolio with the highest sharpe ratio. Here the portfolio composition:
 
  ---- | ----      
 Return    | 0.140984
@@ -157,8 +158,35 @@ ARG Weight   | 0.001402
 
 
 
+
+
+
+
 ### Linear Programming with Scipy: Optimal Portfolio
 
+Using Scipy we quick resolve the optimiaztion problem by minimizing functions. We will be using the ‘SLSQP’ method in our “minimize” function (which stands for Sequential Least Squares Programming, and the “eq” argument means we are looking for our function to equate to zero, otherwise speaking, weights must sum to 1.
+
+The “bounds” specify that each individual stock weight must be between 0 and 1
+
+
+**Minimization variance portfolio function**
+
+To find the Minimum Variance Portfolio Composition we must to run this piece of code:
+
+
+```python
+def min_func_variance(weights):
+    return statistics(weights)[1]
+
+cons = ({'type': 'eq', 'fun': lambda x:  np.sum(x) - 1}) # No Short positions
+
+bnds = tuple((0, 1) for x in range(num_stocks))
+    
+optv = sco.minimize(min_func_variance, equal_weights, method='SLSQP',
+                       bounds=bnds, constraints=cons)
+```
+
+Here the optimal weights:
 
 
 ECO|BIC|ISA|SIS|ARG
@@ -166,24 +194,56 @@ ECO|BIC|ISA|SIS|ARG
 0.09 |0.24|0.19|0.34|0.14
 
 
+```python
+# [Portfolio Return, Portfolio Std, Sharpe Ratio]
+
+array([0.06907, 0.16479, 0.41915])
+```
+
+
+
+**Maximizing sharpe ratio function**
+
+Scipy offers a “minimize” function, but no “maximize” function, so maximization of the Sharpe ratio is analogous to the minimisation of the negative Sharpe ratio:
+
+```python
+def min_func_sharpe(weights):
+    return -statistics(weights)[2]
+    
+cons = ({'type': 'eq', 'fun': lambda x:  np.sum(x) - 1}) # No Short positions
+
+bnds = tuple((0, 1) for x in range(num_stocks))
+
+opts = sco.minimize(min_func_sharpe, equal_weights, method='SLSQP',
+                       bounds=bnds, constraints=cons)
+```
+
+Here the optimal weights:
+
+
 ECO|BIC|ISA|SIS|ARG
 ----- | ----- |----- | ----- |
 0.0 |0.4454|0.5546|0.0|0.0
 
-
-
 ```python
+# [Portfolio Return, Portfolio Std, Sharpe Ratio]
+
 array([0.1437 , 0.196  , 0.73318])
 ```
 
-```python
-array([0.06907, 0.16479, 0.41915])
-```
+You'll notice that the composition and metrics of both portfolios is similar to portfolios found through the Monte Carlo method.
+
+
+Plotting the results and delineating the efficient boundary we get this:
+
 
 <img src="images/efficient_front.png?raw=true"/>
 
+Obviously, if we were invested 100 percent in **ISA**, the return would be higher but the risk would be too.
+
 
 ## PyPortfolioOpt Library
+
 
 
 ```python
