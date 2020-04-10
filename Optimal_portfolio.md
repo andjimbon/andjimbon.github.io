@@ -26,15 +26,20 @@ With Python and a few lines of code we can easily plot the stocks prices, the lo
 
 <img src="images/stock_ret.png?raw=true"/>
 
-Cumulative return shows us that if we were invested 1 monetary unit in ISA in 2014, at the end of the analyzed period, we would get almost 225 monetary units (free fee)
+Cumulative return shows us that if we were invested 1 monetary unit in ISA in 2014, at the end of the analyzed period, we would get almost 225 monetary units (fee free)
 
 <img src="images/cummulative_ret.png?raw=true"/>
 
 To calculate the monthly realized volatilities for ISA we use daily returns and then annualize the values.
+
 The formula for realized volatility is as follows:
+
 ![RV \equiv \sqrt{\sum_{i=1}^{T} r_t^2}](https://render.githubusercontent.com/render/math?math=RV%20%5Cequiv%20%5Csqrt%7B%5Csum_%7Bi%3D1%7D%5E%7BT%7D%20r_t%5E2%7D)
 
- Where r_t \equiv return at period t
+Where ![\large r_t =](https://render.githubusercontent.com/render/math?math=%5Clarge%20r_t%20%3D) return at period t
+
+We can plot the daily returns for ISA and below plot its the daily realized volatility.
+The grahp shows us tha the maximum daily volatility for ISA is ![\sigma \approx 1](https://render.githubusercontent.com/render/math?math=%5Csigma%20%5Capprox%201)
 
 <img src="images/ret_vs_vol.png?raw=true"/>
 
