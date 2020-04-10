@@ -36,11 +36,11 @@ We can plot the daily returns for ISA and below plot its daily realized volatili
 
 The formula for realized volatility is as follows:
 
-![RV \equiv \sqrt{\sum_{i=1}^{T} r_t^2}](https://render.githubusercontent.com/render/math?math=RV%20%5Cequiv%20%5Csqrt%7B%5Csum_%7Bi%3D1%7D%5E%7BT%7D%20r_t%5E2%7D)
+![\Large RV \equiv \sqrt{\sum_{i=1}^{T} r_t^2}](https://render.githubusercontent.com/render/math?math=RV%20%5Cequiv%20%5Csqrt%7B%5Csum_%7Bi%3D1%7D%5E%7BT%7D%20r_t%5E2%7D)
 
-Where ![\large r_t =](https://render.githubusercontent.com/render/math?math=%5Clarge%20r_t%20%3D) return at period t
+Where ![\Large r_t =](https://render.githubusercontent.com/render/math?math=%5Clarge%20r_t%20%3D) return at period t
 
-The grahp shows us that the maximum daily volatility for ISA is ![\large sigma \approx 1](https://render.githubusercontent.com/render/math?math=%5Csigma%20%5Capprox%201)
+The grahp shows us that the maximum daily volatility for ISA is ![\Large sigma \approx 1](https://render.githubusercontent.com/render/math?math=%5Csigma%20%5Capprox%201)
 
 <img src="images/ret_vs_vol.png?raw=true"/>
 
@@ -94,30 +94,47 @@ Before to do that, we will refresh some formulas:
 
 wehere:
 
-![\large \sigma_{port} =](https://render.githubusercontent.com/render/math?math=%5Csigma_%7Bport%7D%20%3D) the standard deviation of the portfolio
+![\Large \sigma_{port} =](https://render.githubusercontent.com/render/math?math=%5Csigma_%7Bport%7D%20%3D) the standard deviation of the portfolio
 
-![\large \w_{i} =](https://render.githubusercontent.com/render/math?math=%5Cw_%7Bi%7D%20%3D) the weights of individual assets in the portfolio, where weights are determined by the proportion of value in the portfolio
+![\Large \w_{i} =](https://render.githubusercontent.com/render/math?math=%5Cw_%7Bi%7D%20%3D) the weights of individual assets in the portfolio, where weights are determined by the proportion of value in the portfolio
 
-![\large \sigma_i^2 =](https://render.githubusercontent.com/render/math?math=%5Csigma_i%5E2%20%3D) the variance of rates of return for asset i
+![\Large \sigma_i^2 =](https://render.githubusercontent.com/render/math?math=%5Csigma_i%5E2%20%3D) the variance of rates of return for asset i
 
-![\large \Cov_{ij} =](https://render.githubusercontent.com/render/math?math=%5CCov_%7Bij%7D%20%3D) the variance of rates of return for asset i, where ![\large \Cov_{ij} = r_{ij}\sigma_i\sigma_j](https://render.githubusercontent.com/render/math?math=%5CCov_%7Bij%7D%20%3D%20r_%7Bij%7D%5Csigma_i%5Csigma_j)
+![\Large \Cov_{ij} =](https://render.githubusercontent.com/render/math?math=%5CCov_%7Bij%7D%20%3D) the variance of rates of return for asset i, where ![\large \Cov_{ij} = r_{ij}\sigma_i\sigma_j](https://render.githubusercontent.com/render/math?math=%5CCov_%7Bij%7D%20%3D%20r_%7Bij%7D%5Csigma_i%5Csigma_j)
 
 
 **Portfolio Expected Return**
 
-![\large \bar{R}_{port} = \sum_{i=1}^{n}w_ir_i](https://render.githubusercontent.com/render/math?math=%5Clarge%20%5Cbar%7BR%7D_%7Bport%7D%20%3D%20%5Csum_%7Bi%3D1%7D%5E%7Bn%7Dw_ir_i)
+![\Large \bar{R}_{port} = \sum_{i=1}^{n}w_ir_i](https://render.githubusercontent.com/render/math?math=%5Clarge%20%5Cbar%7BR%7D_%7Bport%7D%20%3D%20%5Csum_%7Bi%3D1%7D%5E%7Bn%7Dw_ir_i)
 
 where:
 
-![\large \bar{R}_{port} =](https://render.githubusercontent.com/render/math?math=%5Clarge%20%5Cbar%7BR%7D_%7Bport%7D%20%3D) expected return of portfolio
+![\Large \bar{R}{port} =](https://render.githubusercontent.com/render/math?math=%5Clarge%20%5Cbar%7BR%7D%7Bport%7D%20%3D) expected return of portfolio
 
-![\large \w_{i} =](https://render.githubusercontent.com/render/math?math=%5Cw_%7Bi%7D%20%3D) the proportion, or weights of total funds invested in security i
+![\Large \w_{i} =](https://render.githubusercontent.com/render/math?math=%5Cw_%7Bi%7D%20%3D) the proportion, or weights of total funds invested in security i
 
-![\large r_i =](https://render.githubusercontent.com/render/math?math=%5Clarge%20r_i) expected return for security i
+![\Large r_i =](https://render.githubusercontent.com/render/math?math=%5Clarge%20r_i) expected return for security i
 
+
+**Sharpe Ratio**
+
+![\large SR = \frac{\bar{R}_{port} - Rf}{\sigma_{port}}](https://render.githubusercontent.com/render/math?math=%5Clarge%20SR%20%3D%20%5Cfrac%7B%5Cbar%7BR%7D_%7Bport%7D%20-%20Rf%7D%7B%5Csigma_%7Bport%7D%7D)
+
+We will generate **100k** randomly portfolio combinations and we are going to store them in a Python dict:
+
+```python
+dict_keys(['Returns', 'Volatility', 'Sharpe Ratio', 'ECO Weight', 'BIC Weight', 'ISA Weight', 'SIS Weight', 'ARG Weight'])
+```
+
+Then, plot the results:
+
+<img src="images/EF_monte_carlo.png?raw=true"/>
+
+
+The red star is the portfolio with the lowest sharpe ratio. Here the composition:
 
  ---- | ----
-Returns     |  0.069986
+Return     |  0.069986
 Volatility   | 0.164826
 Sharpe Ratio | 0.424605
 ECO Weight   | 0.078844
@@ -126,9 +143,10 @@ ISA Weight   | 0.204278
 SIS Weight   | 0.348250
 ARG Weight   | 0.128342 
 
+The yellow star is the portfolio with the highest sharpe ratio. Here the composition:
 
  ---- | ----      
-Returns      | 0.140984
+Return    | 0.140984
 Volatility   | 0.194283
 Sharpe Ratio | 0.725665
 ECO Weight   | 0.020040
@@ -136,9 +154,6 @@ BIC Weight   | 0.410700
 ISA Weight   | 0.561843
 SIS Weight   | 0.006014
 ARG Weight   | 0.001402
-
-
-<img src="images/EF_monte_carlo.png?raw=true"/>
 
 
 
