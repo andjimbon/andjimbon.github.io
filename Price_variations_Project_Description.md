@@ -1,5 +1,7 @@
 ## Price Intelligence with Python and Pandas
 
+<p style="font-size:12px">Click <a href="https://github.com/andjimbon/Mercadolibre-Tucarro-Project/blob/master/script-publication-series.ipynb">Here</a> to see Code</p>
+
 **Project description:** With this project you will be able to track Mercadolibre daily publications and identify variations in the price of products.
 
 Note:
@@ -45,7 +47,7 @@ The script will run the function "first_join" if we haven't merging any table be
 
 ### 3. Final Table
 
-[Here ](https://www.dropbox.com/s/votc015fn0ajr1m/Base_datos_actualizaciones_ejemplo.xlsx?dl=0)is an example that shows the changes in the prices of different products over a period of time.
+[Click Here ](https://www.dropbox.com/s/votc015fn0ajr1m/Base_datos_actualizaciones_ejemplo.xlsx?dl=0) to view an example that shows the changes in the prices of different products over a period of time.
 
 <img src="images/price_var.PNG?raw=true"/>
 
