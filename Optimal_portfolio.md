@@ -6,14 +6,14 @@
 
 This Project uses the API provided by [Investpy](https://investpy.readthedocs.io/index.html) to get historical data for colombian stocks.
 
-The historical data for U.S Stocks can easily get from Yahoo Finance.
+The historical data for U.S. stocks can easily get from Yahoo Finance.
 
 
 ### Historical Data
 
 For the purpose of this project we will get the historical prices from Ecopetrol (**ECO**), Bancolombia (**BIC**), Interconnection Electric SA (**ISA**), Grupo de Inversiones Suramericana (**SIS**) and Grupo Argos (**ARG**). The history range for the analysis is from **'01/01/2014'** to **'01/02/2020'** ('%d/%m/%Y').
 
-Note: Investpy just let us get the historical price for one stock at a time, so we need to iterate over the ticker list and concatenate dataframes for each stock. The result will be a one dataframe containing the daily close price for each ticker
+**Note**: Investpy just let us get the historical price for one stock at a time, so we need to iterate over the ticker list and concatenate dataframes for each stock. The result will be a one dataframe containing the daily close price for each ticker
 
 Date|ECO|BIC|ISA|SIS|ARG
 ----- | ----- |----- | ----- |----- |
