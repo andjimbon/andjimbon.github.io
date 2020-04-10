@@ -1,5 +1,7 @@
 ## Real Estate Market in Colombia
 
+<p style="font-size:12px">Click Here <a href="https://github.com/andjimbon/Mercadolibre-Property-Scrapy-Project/blob/master/Meli%20Property/property_meli.py">Here</a> to see Code</p>
+
 **Project description:** With this code you will be abble to compare market prices for sellig or renting properties (Apartments/Houses/Offices) from diferent neighboorhoods or cities in Colombia, and get the information from each property publication (Rooms, bathrooms, M2, House Expenses, etc.)
 
 This algorithm scrapes data from [Mercadolibre Colombia](https://www.mercadolibre.com.co/inmuebles) and creates a database with property items and their Google geogrpahical location.
@@ -41,7 +43,7 @@ finish_reason | finished
 
 ### 3. Final Table
 
-[Here ](https://www.dropbox.com/s/83q7mc0n3eodb1n/Base_Datos_ejemplo.xlsx?dl=0)is an example that shows the structured data
+[Click Here ](https://www.dropbox.com/s/83q7mc0n3eodb1n/Base_Datos_ejemplo.xlsx?dl=0)to view an example that shows the structured data
 
 <img src="images/Table.PNG?raw=true"/>
 
