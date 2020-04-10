@@ -4,7 +4,7 @@
 
 ### Python Projects
 
-[1. Optimal Portfolio with Colombian Stocks](/Optimal_portfolio.md)
+[1. Financial Analysis and Optimal Portfolio with Colombian Stocks](/Optimal_portfolio.md)
 
 <p style="font-size:13px">Click <a href="https://github.com/andjimbon/Efficient-Frontier-for-Colombian-Stocks/blob/master/Optimal_Portfolio_with_Colombian_Stocks.ipynb">Here</a> to see Code</p>
 
