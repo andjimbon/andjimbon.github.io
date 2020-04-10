@@ -2,15 +2,35 @@
 
 <p style="font-size:13px">Click <a href="https://github.com/andjimbon/Efficient-Frontier-for-Colombian-Stocks/blob/master/Optimal_Portfolio_with_Colombian_Stocks.ipynb">Here </a>to see Code</p>
 
-**Project description:** Financial analysis for colombian stocks. All along this code
+**Project description:** Financial analysis for colombian stocks and portfolio optimization methods (Monte Carlo approach and Scipy’s “optimize” function for minimizing or maximizing objective functions subject to constraints)
 
-With the API provided by [Investpy](https://investpy.readthedocs.io/index.html) it's possible to get historical data for colombian stocks 
+This Project uses the API provided by [Investpy](https://investpy.readthedocs.io/index.html) to get historical data for colombian stocks.
+
+The historical data for U.S Stocks can easily get from Yahoo Finance.
 
 ### 1. Historical Data
+
+For the purpose of this project we will get the historical prices from Ecopetrol (ECO), Bancolombia (BIC), Interconnection Electric SA (ISA), Grupo de Inversiones Suramericana (SIS) and Grupo Argos (ARG). The history range for the analysis is from '01/01/2014' to '01/02/2020' ('%d/%m/%Y').
+
+Note: Investpy just let us get the historical price for one stock at a time, so we need to iterate over the ticker list and concatenate dataframes for each stock. The result will be a one dataframe containing the daily close price for each ticker
 
 Date|ECO|BIC|ISA|SIS|ARG
 ----- | ----- |----- | ----- |----- |
 2020-01-31 | 3180.0 | 42440.0 | 18800.0 | 32000.0 | 17480.0
+
+### Plotting useful information
+
+With Python and a few lines of code we can easily plot the stocks prices, the log mean return and the cumulative return over time.
+
+<img src="images/stock_price.png?raw=true"/>
+
+<img src="images/stock_ret.png?raw=true"/>
+
+Cumulative return shows us that if we were invested 1 monetary unit in ISA, at the end of the analyzed period, we would get almost 225 monetary units (free fee)
+
+<img src="images/cummulative_ret.png?raw=true"/>
+
+
 
 ```python
 {'ECO': 0.0, 'BIC': 0.43204, 'ISA': 0.56796, 'SIS': 0.0, 'ARG': 0.0} 
@@ -29,13 +49,7 @@ ECO|BIC|ISA|SIS|ARG
 0.09 |0.24|0.19|0.34|0.14
 
 
-<img src="images/stock_price.png?raw=true"/>
 
-
-<img src="images/stock_ret.png?raw=true"/>
-
-
-<img src="images/cummulative_ret.png?raw=true"/>
 
 
 <img src="images/matrix.png?raw=true"/>
