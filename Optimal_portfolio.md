@@ -20,6 +20,7 @@ Date|ECO|BIC|ISA|SIS|ARG
 ----- | ----- |----- | ----- |----- |
 2020-01-31 | 3180.0 | 42440.0 | 18800.0 | 32000.0 | 17480.0
 
+<p>&nbsp;</p>
 
 ### Plotting useful information
 
@@ -45,6 +46,7 @@ The grahp shows us that the maximum daily volatility for ISA is ![\Large sigma \
 
 <img src="images/ret_vs_vol.png?raw=true"/>
 
+<p>&nbsp;</p>
 
 ### Log Return Distributions and Correlation Matrix
 
@@ -60,6 +62,7 @@ The graph shows postive corretation over time between the two stocks
 
 <img src="images/corr_ot.png?raw=true"/>
  
+<p>&nbsp;</p>
 
 ### Statistics and Normality Tests
 
@@ -79,6 +82,7 @@ Norm test p-value | 0.000
 
 The **p -values** of the different tests are all zero, strongly rejecting the test hypothesis. We might have to use richer models that are able to generate fat tails (e.g., models with stochastic volatility or jump diffusion models).
 
+<p>&nbsp;</p>
 
 ## Opmitization Methods
 
@@ -133,7 +137,7 @@ Then, plot the results:
 <img src="images/EF_monte_carlo.png?raw=true"/>
 
 
-The red star is the portfolio with the lowest sharpe ratio. Here the portfolio composition:
+The **red star** is the portfolio with the lowest sharpe ratio. Here the portfolio composition:
 
  ---- | ----
 Return     |  0.069986
@@ -145,7 +149,7 @@ ISA Weight   | 0.204278
 SIS Weight   | 0.348250
 ARG Weight   | 0.128342 
 
-The yellow star is the portfolio with the highest sharpe ratio. Here the portfolio composition:
+The **yellow star** is the portfolio with the highest sharpe ratio. Here the portfolio composition:
 
  ---- | ----      
 Return    | 0.140984
@@ -157,10 +161,7 @@ ISA Weight   | 0.561843
 SIS Weight   | 0.006014
 ARG Weight   | 0.001402
 
-
-
-
-
+<p>&nbsp;</p>
 
 
 ### Linear Programming with Scipy: Optimal Portfolio
@@ -201,6 +202,7 @@ ECO|BIC|ISA|SIS|ARG
 array([0.06907, 0.16479, 0.41915])
 ```
 
+<p>&nbsp;</p>
 
 
 **Maximizing sharpe ratio function**
@@ -242,6 +244,7 @@ Plotting the results and delineating the efficient boundary we get this:
 
 Obviously, if we were invested 100 percent in **ISA**, the return would be higher but the risk would be too.
 
+<p>&nbsp;</p>
 
 ## PyPortfolioOpt Library
 
