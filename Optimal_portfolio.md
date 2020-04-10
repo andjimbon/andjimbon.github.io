@@ -84,7 +84,7 @@ The **p -values** of the different tests are all zero, strongly rejecting the te
 
 ### Monte Carlo Approach: : Optimal Portfolio
 
-With this method we will try to discover the optimal weights by simply creating a large number of random portfolios, and extract within all these randomly portfolios the one who has the maximum sharpe Ratio (Optimal Portfolio) and in the other hand, the one who has the minimun variance (Minimun Variance Portfolio)
+With this method we will try to discover the optimal weights by simply creating a large number of random portfolios, and extract within all these randomly portfolios the one who has the maximum sharpe Ratio (Optimal Portfolio) and in the other hand, the one who has the minimun variance (Minimun Variance Portfolio). For sharpe ratio calculations we set a risk free = 0
 
 Before to do that, we will review some formulas: 
 
@@ -218,12 +218,13 @@ opts = sco.minimize(min_func_sharpe, equal_weights, method='SLSQP',
                        bounds=bnds, constraints=cons)
 ```
 
-Here the optimal weights:
+Here the optimal weights (for sharpe ratio calculations we set a risk free = 0):
 
 
 ECO|BIC|ISA|SIS|ARG
 ----- | ----- |----- | ----- |
 0.0 |0.4454|0.5546|0.0|0.0
+
 
 ```python
 # [Portfolio Return, Portfolio Std, Sharpe Ratio]
@@ -231,8 +232,7 @@ ECO|BIC|ISA|SIS|ARG
 array([0.1437 , 0.196  , 0.73318])
 ```
 
-You'll notice that the composition and metrics of both portfolios is similar to portfolios found through the Monte Carlo method.
-
+You'll notice that the composition and metrics of both portfolios is similar to portfolios found through the Monte Carlo method. We will always experience some discrepancies between them. In fact, we can run enough simulated portfolios to replicate the exact weights, but never it would be the exact weights for optimal portfolio.
 
 Plotting the results and delineating the efficient boundary we get this:
 
@@ -244,7 +244,9 @@ Obviously, if we were invested 100 percent in **ISA**, the return would be highe
 
 ## PyPortfolioOpt Library
 
+Without doubt, this is the easiest way to find the optimal weights for a given portfolio. With a few lines of code this library is able to optimize a portfolio in seconds, and tell us how many shares we can buy at the lastest close price of the stock.
 
+**Optimal Weights**
 
 ```python
 {'ECO': 0.0, 'BIC': 0.43204, 'ISA': 0.56796, 'SIS': 0.0, 'ARG': 0.0} 
@@ -254,6 +256,8 @@ Annual volatility: 19.7%
 Sharpe Ratio: 0.73
 (0.14406456150209906, 0.19653202475586729, 0.7330335179778285)
 ```
+
+If we want invest $10 million COP in this Optimal portfolio, we should buy 102 shares of BIC and 301 shares of ISA, and expect an annual return of 14.4% (Markowitz Theory)
 
 
 ```python
