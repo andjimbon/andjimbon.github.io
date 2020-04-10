@@ -24,15 +24,6 @@ Sharpe Ratio: 0.73
 <img src="images/corr_ot.png?raw=true"/>
 
 
-
-Results for symbol ECO | 
------------- | -------------
-Skew of data set | -0.097
-Skew test p-value | 0.126
-Kurt of data set | 3.276
-Kurt test p-value | 0.000
-Norm test p-value | 0.000
-
 ECO|BIC|ISA|SIS|ARG
 ----- | ----- |----- | ----- |
 0.09 |0.24|0.19|0.34|0.14
@@ -100,7 +91,7 @@ Funds Remaining: $12320.00
 
 
 
- - | -
+ ---- | ----
 Returns     |  0.069986
 Volatility   | 0.164826
 Sharpe Ratio | 0.424605
