@@ -4,11 +4,11 @@
 
 ### Python Projects
 
-[2. Optimal Portfolio](/Price of books Project Description.md)
+[1. Optimal Portfolio with Colombian Stocks](/Optimal_portfolio.md)
 
-<p style="font-size:13px">Click <a href="https://github.com/andjimbon/Scraping-Project-Price-of-Books/blob/master/Scraping%20Project%20-%20LibreriadelaU.ipynb">Here</a> to see Code</p>
+<p style="font-size:13px">Click <a href="https://github.com/andjimbon/Efficient-Frontier-for-Colombian-Stocks/blob/master/Optimal_Portfolio_with_Colombian_Stocks.ipynb">Here</a> to see Code</p>
 
-<img src="images/Distribution.JPG?raw=true"/>
+<img src="images/efficient_front.png?raw=true"/>
 
 ---
 [2. Price of Books in Colombian Market](/Price of books Project Description.md)
