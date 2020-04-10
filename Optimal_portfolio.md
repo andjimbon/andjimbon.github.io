@@ -59,7 +59,7 @@ ECO|BIC|ISA|SIS|ARG
 <img src="images/efficient_front.png?raw=true"/>
 
 statistic | value
------------- | -------------
+- | -
 size | 1481.000
 min | -0.104
 max | 0.103
@@ -68,7 +68,7 @@ std | 0.020
 skew | -0.097
 kurtosis | 3.276
 
-Results for symbol ECO
+Results for symbol ECO | 
 ------------ | -------------
 Skew of data set | -0.097
 Skew test p-value | 0.126
@@ -96,11 +96,11 @@ Discrete Allocation: {'BIC': 102.0, 'ISA': 301.0}
 Funds Remaining: $12320.00
 ```
 
-<img src="images/liner_r.png?raw=true"/>
+<img src="images/linear_r.png?raw=true"/>
 
 
 
- ---- | ----
+ - | -
 Returns     |  0.069986
 Volatility   | 0.164826
 Sharpe Ratio | 0.424605
