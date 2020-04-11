@@ -80,7 +80,7 @@ Kurt of data set | 3.276
 Kurt test p-value | 0.000
 Norm test p-value | 0.000
 
-The **p -values** of the different tests are all zero, strongly rejecting the test hypothesis. We might have to use richer models that are able to generate fat tails (e.g., models with stochastic volatility or jump diffusion models).
+The **p -values** of the kurtosis and nomal tests are zero, rejecting the test hypothesis. We might have to use richer models that are able to generate fat tails (e.g., models with stochastic volatility or jump diffusion models).
 
 <p>&nbsp;</p>
 
