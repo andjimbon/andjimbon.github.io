@@ -2,7 +2,7 @@
 
 <p style="font-size:13px">Click <a href="https://github.com/andjimbon/Efficient-Frontier-for-Colombian-Stocks/blob/master/Optimal_Portfolio_with_Colombian_Stocks.ipynb">Here </a>to see Code</p>
 
-**Project description:** Financial analysis for colombian stocks and portfolio optimization methods (Monte Carlo approach and Scipy’s “optimize” function for minimizing or maximizing objective functions subject to constraints).
+**Project description:** Financial analysis for colombian stocks and portfolio optimization methods (**Monte Carlo** approach and **Scipy’s** “optimize” function for minimizing or maximizing objective functions subject to constraints).
 
 This Project uses the API provided by [Investpy](https://investpy.readthedocs.io/index.html) to get historical data for colombian stocks.
 
@@ -12,9 +12,9 @@ The historical data for U.S. stocks can easily get from Yahoo Finance.
 
 ### Historical Data
 
-For the purpose of this project we will get the historical prices from Ecopetrol (**ECO**), Bancolombia (**BIC**), Interconnection Electric (**ISA**), Grupo de Inversiones Suramericana (**SIS**) and Grupo Argos (**ARG**). We specified a history range from **'01/01/2014'** to **'01/02/2020'** ('%d/%m/%Y').
+For the purpose of this project we will get the historical prices from Ecopetrol (**ECO**), Bancolombia (**BIC**), Interconnection Electric (**ISA**), Grupo de Inversiones Suramericana (**SIS**) and Grupo Argos (**ARG**). We set a history range from **'01/01/2014'** to **'01/02/2020'** ('%d/%m/%Y').
 
-**Note**: Investpy just let us get the historical price for one stock at a time, so we need to iterate over the ticker list and concatenate dataframes for each stock. The result will be a one dataframe containing the daily close price for each ticker.
+**Note**: [Investpy](https://investpy.readthedocs.io/index.html) just let us get the historical price for one stock at a time, so we need to iterate over the ticker list and concatenate dataframes for each stock. The result will be a one dataframe containing the daily close price for each ticker.
 
 Date|ECO|BIC|ISA|SIS|ARG
 ----- | ----- |----- | ----- |----- |
@@ -24,7 +24,7 @@ Date|ECO|BIC|ISA|SIS|ARG
 
 ### Plotting useful information
 
-With Python and a few lines of code we can easily plot the stocks prices, the log mean return and the cumulative return over time.
+With a few lines of code in Python, we can easily plot the stocks prices, the log mean return and the cumulative return over time.
 
 <img src="images/stock_price.png?raw=true"/>
 
@@ -50,7 +50,7 @@ The grahp shows us that the maximum daily volatility for ISA is ![\Large sigma \
 
 ### Log Return Distributions and Correlation Matrix
 
-Pandas provides us an easy way to plot a scatter matrix and observe the distribution of returns for each stock and the correlation between them.
+Pandas provides us an easy way to plot a scatter matrix with the distribution of returns for each stock and the correlation between them.
 
 <img src="images/matrix.png?raw=true"/>
 
@@ -125,6 +125,10 @@ where:
 
 ![\Large SR = \frac{\bar{R}_{port} - Rf}{\sigma_{port}}](https://render.githubusercontent.com/render/math?math=%5Clarge%20SR%20%3D%20%5Cfrac%7B%5Cbar%7BR%7D_%7Bport%7D%20-%20Rf%7D%7B%5Csigma_%7Bport%7D%7D)
 
+where:
+
+![Rf =](https://render.githubusercontent.com/render/math?math=Rf%20%3D) Riskfree rate 
+
 ------------
 <p>&nbsp;</p>
 
@@ -139,7 +143,7 @@ Then plot the results:
 <img src="images/EF_monte_carlo.png?raw=true"/>
 
 
-The **red star** is the portfolio with the lowest sharpe ratio. Here the portfolio composition:
+The **red star** is the portfolio with the minimum variance. Here the portfolio composition:
 
  ---- | ----
 Return     |  0.069986
@@ -151,7 +155,7 @@ ISA Weight   | 0.204278
 SIS Weight   | 0.348250
 ARG Weight   | 0.128342 
 
-The **yellow star** is the portfolio with the highest sharpe ratio. Here the portfolio composition:
+The **yellow star** is the portfolio with the maximum sharpe ratio. Here the portfolio composition:
 
  ---- | ----      
 Return    | 0.140984
@@ -168,14 +172,14 @@ ARG Weight   | 0.001402
 
 ### Linear Programming with Scipy: Optimal Portfolio
 
-Using Scipy we quick resolve the optimiaztion problem by minimizing functions. We will be using the ‘SLSQP’ method in our “minimize” function (which stands for Sequential Least Squares Programming, and the “eq” argument means we are looking for our function to equate to zero, otherwise speaking, weights must sum to 1.
+Using Scipy we quick resolve the optimiaztion problem by minimizing functions. We will be using the ‘SLSQP’ method in our “minimize” function (which stands for Sequential Least Squares Programming, and the “eq” argument means we are looking for our function to equate to zero, otherwise speaking, weights of portfolio must sum to 1 (no short positions).
 
 The “bounds” specify that each individual stock weight must be between 0 and 1.
 
 
 **Minimization variance portfolio function**
 
-To find the Minimum Variance Portfolio Composition we must to run this piece of code:
+To find the weights for Minimum Variance Portfolio we must to run this piece of code to minimize the objective function:
 
 
 ```python
@@ -239,10 +243,11 @@ array([0.1437 , 0.196  , 0.73318])
 
 You'll notice that the composition and metrics of both portfolios is similar to portfolios found through the Monte Carlo method. We will always experience some discrepancies between them. In fact, we can run enough simulated portfolios to replicate the exact weights, but never it would be the exact weights for optimal portfolio.
 
-Plotting the results and delineating the efficient boundary we get this:
+Finally, we plot the efficient boundary with optimal weights for each portfolio:
 
 
 <img src="images/efficient_front.png?raw=true"/>
+
 
 Obviously, if we were invested 100 percent in **ISA**, the return would be higher but the risk would be too.
 
@@ -263,7 +268,7 @@ Sharpe Ratio: 0.73
 (0.14406456150209906, 0.19653202475586729, 0.7330335179778285)
 ```
 
-If we want invest **$10 million COP** in this Optimal portfolio, we should buy 102 shares of BIC and 301 shares of ISA, and expect an annual return of 14.4% (Markowitz Theory).
+If we want invest **$10 million COP** in this Optimal portfolio, we should buy 102 shares of BIC and 301 shares of ISA, and expect an annual return of 14.4% (Markowitz's Modern Portfolio Theory).
 
 
 ```python
