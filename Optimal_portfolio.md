@@ -1,4 +1,4 @@
-## Financial Analysis and Efficient Frontier for Colombian Stocks
+## Financial Analysis and Markowitz's Efficient Frontier for Colombian Stocks
 
 <p style="font-size:13px">Click <a href="https://github.com/andjimbon/Efficient-Frontier-for-Colombian-Stocks/blob/master/Optimal_Portfolio_with_Colombian_Stocks.ipynb">Here </a>to see Code</p>
 
@@ -12,7 +12,7 @@ The historical data for U.S. stocks can easily get from Yahoo Finance.
 
 ### Historical Data
 
-For the purpose of this project we will get the historical prices from Ecopetrol (**ECO**), Bancolombia (**BIC**), Interconnection Electric (**ISA**), Grupo de Inversiones Suramericana (**SIS**) and Grupo Argos (**ARG**). The history range for the analysis is from **'01/01/2014'** to **'01/02/2020'** ('%d/%m/%Y').
+For the purpose of this project we will get the historical prices from Ecopetrol (**ECO**), Bancolombia (**BIC**), Interconnection Electric (**ISA**), Grupo de Inversiones Suramericana (**SIS**) and Grupo Argos (**ARG**). We specified a history range from **'01/01/2014'** to **'01/02/2020'** ('%d/%m/%Y').
 
 **Note**: Investpy just let us get the historical price for one stock at a time, so we need to iterate over the ticker list and concatenate dataframes for each stock. The result will be a one dataframe containing the daily close price for each ticker.
 
@@ -58,7 +58,7 @@ Selecting two stock we can run an OSL (ordinary least-squares) analysis and then
 
 <img src="images/linear_r.png?raw=true"/>
 
-The graph shows postive corretation over time between the two stocks
+The graph shows postive corretation over time between the two stocks:
 
 <img src="images/corr_ot.png?raw=true"/>
  
@@ -66,7 +66,7 @@ The graph shows postive corretation over time between the two stocks
 
 ### Statistics and Normality Tests
 
-Next graph shows the QQ plot for ECO. Clearly, the sample quantile values do not lie on a straight line, indicating “non-normality.” On the left and right sides there are many values that lie well below the line and well above the line, respectively. In other words, the time series data exhibits fat tails,
+Next graph shows the QQ plot for ECO. Clearly, the sample quantile values do not lie on a straight line, indicating “non-normality.” On the left and right sides there are many values that lie well below the line and well above the line, respectively. In other words, the time series data exhibits fat tails.
 
 <img src="images/qqplot.png?raw=true"/>
 
@@ -87,7 +87,7 @@ The **p -values** of the different tests are all zero, strongly rejecting the te
 ## Opmitization Methods
 
 
-### Monte Carlo Approach: : Optimal Portfolio
+### Monte Carlo Approach: Optimal Portfolio
 
 With this method we will try to discover the optimal weights by simply creating a large number of random portfolios, and extract within all these randomly portfolios the one who has the maximum sharpe Ratio (Optimal Portfolio) and in the other hand, the one who has the minimun variance (Minimun Variance Portfolio). For sharpe ratio calculations we set a **risk free = 0**.
 
