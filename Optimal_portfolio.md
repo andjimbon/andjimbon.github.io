@@ -2,7 +2,7 @@
 
 <p style="font-size:13px">Click <a href="https://github.com/andjimbon/Efficient-Frontier-for-Colombian-Stocks/blob/master/Optimal_Portfolio_with_Colombian_Stocks.ipynb">Here </a>to see Code</p>
 
-**Project description:** Financial analysis for colombian stocks and portfolio optimization methods (Monte Carlo approach and Scipy’s “optimize” function for minimizing or maximizing objective functions subject to constraints)
+**Project description:** Financial analysis for colombian stocks and portfolio optimization methods (Monte Carlo approach and Scipy’s “optimize” function for minimizing or maximizing objective functions subject to constraints).
 
 This Project uses the API provided by [Investpy](https://investpy.readthedocs.io/index.html) to get historical data for colombian stocks.
 
@@ -14,7 +14,7 @@ The historical data for U.S. stocks can easily get from Yahoo Finance.
 
 For the purpose of this project we will get the historical prices from Ecopetrol (**ECO**), Bancolombia (**BIC**), Interconnection Electric (**ISA**), Grupo de Inversiones Suramericana (**SIS**) and Grupo Argos (**ARG**). The history range for the analysis is from **'01/01/2014'** to **'01/02/2020'** ('%d/%m/%Y').
 
-**Note**: Investpy just let us get the historical price for one stock at a time, so we need to iterate over the ticker list and concatenate dataframes for each stock. The result will be a one dataframe containing the daily close price for each ticker
+**Note**: Investpy just let us get the historical price for one stock at a time, so we need to iterate over the ticker list and concatenate dataframes for each stock. The result will be a one dataframe containing the daily close price for each ticker.
 
 Date|ECO|BIC|ISA|SIS|ARG
 ----- | ----- |----- | ----- |----- |
@@ -30,7 +30,7 @@ With Python and a few lines of code we can easily plot the stocks prices, the lo
 
 <img src="images/stock_ret.png?raw=true"/>
 
-Cumulative return shows us that if we were invested 1 monetary unit in ISA in 2014, at the end of the analyzed period, we would get almost 225 monetary units (fee free)
+Cumulative return shows us that if we were invested 1 monetary unit in ISA in 2014, at the end of the analyzed period, we would get almost 225 monetary units (fee free).
 
 <img src="images/cummulative_ret.png?raw=true"/>
 
@@ -50,7 +50,7 @@ The grahp shows us that the maximum daily volatility for ISA is ![\Large sigma \
 
 ### Log Return Distributions and Correlation Matrix
 
-Pandas provides us an easy way to plot a scatter matrix and observe the distribution of returns for each stock and the correlation between them
+Pandas provides us an easy way to plot a scatter matrix and observe the distribution of returns for each stock and the correlation between them.
 
 <img src="images/matrix.png?raw=true"/>
 
@@ -89,19 +89,17 @@ The **p -values** of the different tests are all zero, strongly rejecting the te
 
 ### Monte Carlo Approach: : Optimal Portfolio
 
-With this method we will try to discover the optimal weights by simply creating a large number of random portfolios, and extract within all these randomly portfolios the one who has the maximum sharpe Ratio (Optimal Portfolio) and in the other hand, the one who has the minimun variance (Minimun Variance Portfolio). For sharpe ratio calculations we set a *risk free = 0.
+With this method we will try to discover the optimal weights by simply creating a large number of random portfolios, and extract within all these randomly portfolios the one who has the maximum sharpe Ratio (Optimal Portfolio) and in the other hand, the one who has the minimun variance (Minimun Variance Portfolio). For sharpe ratio calculations we set a **risk free = 0**.
 
 Before to do that, we will review some formulas: 
 
------
+------------
 
 **Portfolio Standard Deviation**
 
 ![\Large \sigma_{port} = \sqrt{\sum_{i=1}^{n}w_i^2\sigma_i^2 + \sum_{i=1}^{n}\sum_{i=1}^{n}w_iw_jCov_{ij}}](https://render.githubusercontent.com/render/math?math=%5Csigma_%7Bport%7D%20%3D%20%5Csqrt%7B%5Csum_%7Bi%3D1%7D%5E%7Bn%7Dw_i%5E2%5Csigma_i%5E2%20%2B%20%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%5Csum_%7Bi%3D1%7D%5E%7Bn%7Dw_iw_jCov_%7Bij%7D%7D)
 
 wehere:
-
-![\large \sigma_{port} =](https://render.githubusercontent.com/render/math?math=%5Csigma_%7Bport%7D%20%3D) the standard deviation of the portfolio
 
 ![\Large \w_{i} =](https://render.githubusercontent.com/render/math?math=%5Cw_%7Bi%7D%20%3D) the weights of individual assets in the portfolio, where weights are determined by the proportion of value in the portfolio
 
@@ -116,8 +114,6 @@ wehere:
 ![\Large \bar{R}_{port} = \sum_{i=1}^{n}w_ir_i](https://render.githubusercontent.com/render/math?math=%5Clarge%20%5Cbar%7BR%7D_%7Bport%7D%20%3D%20%5Csum_%7Bi%3D1%7D%5E%7Bn%7Dw_ir_i)
 
 where:
-
-![\bar{R}_{port} =]](https://render.githubusercontent.com/render/math?math=%5Cbar%7BR%7D_%7Bport%7D%20%3D) expected return of portfolio
 
 ![\Large \w_{i} =](https://render.githubusercontent.com/render/math?math=%5Cw_%7Bi%7D%20%3D) the proportion, or weights of total funds invested in security i
 
@@ -174,7 +170,7 @@ ARG Weight   | 0.001402
 
 Using Scipy we quick resolve the optimiaztion problem by minimizing functions. We will be using the ‘SLSQP’ method in our “minimize” function (which stands for Sequential Least Squares Programming, and the “eq” argument means we are looking for our function to equate to zero, otherwise speaking, weights must sum to 1.
 
-The “bounds” specify that each individual stock weight must be between 0 and 1
+The “bounds” specify that each individual stock weight must be between 0 and 1.
 
 
 **Minimization variance portfolio function**
@@ -267,7 +263,7 @@ Sharpe Ratio: 0.73
 (0.14406456150209906, 0.19653202475586729, 0.7330335179778285)
 ```
 
-If we want invest **$10 million COP** in this Optimal portfolio, we should buy 102 shares of BIC and 301 shares of ISA, and expect an annual return of 14.4% (Markowitz Theory)
+If we want invest **$10 million COP** in this Optimal portfolio, we should buy 102 shares of BIC and 301 shares of ISA, and expect an annual return of 14.4% (Markowitz Theory).
 
 
 ```python
