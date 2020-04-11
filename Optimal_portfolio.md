@@ -66,7 +66,7 @@ The graph shows postive corretation over time between the two stocks:
 
 ### Statistics and Normality Tests
 
-Next graph shows the QQ plot for ECO. Clearly, the sample quantile values do not lie on a straight line, indicating “non-normality.” On the left and right sides there are many values that lie well below the line and well above the line, respectively. In other words, the time series data exhibits fat tails.
+Next graph shows the QQ plot for ECO. Clearly, the sample quantile values do not lie on a straight line, indicating “non-normality.” On the left and right sides there are many values that lie well below the line and well above the line, respectively. In other words, the time series data exhibits **fat tails**.
 
 <img src="images/qqplot.png?raw=true"/>
 
@@ -241,7 +241,7 @@ ECO|BIC|ISA|SIS|ARG
 array([0.1437 , 0.196  , 0.73318])
 ```
 
-You'll notice that the composition and metrics of both portfolios is similar to portfolios found through the Monte Carlo method. We will always experience some discrepancies between them. In fact, we can run enough simulated portfolios to replicate the exact weights, but never it would be the exact weights for optimal portfolio.
+You'll notice that the composition and metrics of both portfolios is similar to portfolios found through the Monte Carlo method. We will always experience some discrepancies between them. In fact, we can run enough simulated portfolios to replicate the exact weights, but never they would be the exact weights for optimal portfolio.
 
 Finally, we plot the efficient boundary with optimal weights for each portfolio:
 
