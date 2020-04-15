@@ -1,8 +1,8 @@
 ## Portfolio
 
----
-
 ### Python Projects
+
+---
 
 [1. Financial Analysis and Optimal Portfolio with Colombian Stocks](/Optimal_portfolio.md)
 
@@ -11,7 +11,7 @@
 <img src="images/efficient_front.png?raw=true"/>
 
 ---
-[2. K-Means Clustering with Real Stock Data](/kmeans_clustering.md)
+[2. K-Means Clustering with Real Stock Data](/Kmeans_clustering.md)
 
 <p style="font-size:13px">Click <a href="https://github.com/andjimbon/Scraping-Project-Price-of-Books/blob/master/Scraping%20Project%20-%20LibreriadelaU.ipynb">Here</a> to see Code</p>
 
