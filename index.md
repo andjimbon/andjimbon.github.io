@@ -13,9 +13,9 @@
 ---
 [2. K-Means Clustering with Real Stock Data](/Kmeans_clustering.md)
 
-<p style="font-size:13px">Click <a href="https://github.com/andjimbon/Scraping-Project-Price-of-Books/blob/master/Scraping%20Project%20-%20LibreriadelaU.ipynb">Here</a> to see Code</p>
+<p style="font-size:13px">Click <a href="https://github.com/andjimbon/Kmeans-Clustering-with-Real-Stock-Data/blob/master/K_Means_Clustering_with_Real_Stock_Data.ipynb">Here</a> to see Code</p>
 
-<img src="images/Distribution.JPG?raw=true"/>
+<img src="images/kmeans.png?raw=true"/>
 
 ---
 [3. Price of Books in Colombian Market](/Price of books Project Description.md)
