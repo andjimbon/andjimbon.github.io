@@ -1,5 +1,7 @@
 ## K-means Clustering 
 
+<p style="font-size:13px">Click <a href="https://github.com/andjimbon/Kmeans-Clustering-with-Real-Stock-Data/blob/master/K_Means_Clustering_with_Real_Stock_Data.ipynb">Here </a>to see Code</p>
+
 **Project description**: The goal of this project is to divide stocks into groups with “similar characteristics” using K-means Clustering Method. This approach can help us in portfolio construction to ensure we choose a universe of stocks with sufficient diversification between them.
 
 <p>&nbsp;</p>
@@ -26,19 +28,21 @@ for stock in sp:
     df = pd.concat(sp500_stocks,axis=1)
 ```
 
+<img src="images/df_sp500.PNG?raw=true"/>
+
 Once stock data is into a Pandas dataframe, we are ready to start the K-Means investigation.
 
 <p>&nbsp;</p>
 
 ### Selecting the number of Clusters
 
-**How many clusters do we actually need?** Rather than make some arbitrary decision we can use an Elbow Curve, often used to truncate the number of parameters in data-driven models. This method shows us the relationship between the number of clusters and the Sum of Squared Errors (SSE) resulting from using that number of clusters.
+**How many clusters do we actually need?** Rather than make some arbitrary decision we can use an Elbow Curve, often used to truncate the number of parameters in data-driven models. This method shows us the relationship between the number of clusters and the Sum of Squared Errors **(SSE)** resulting from using that number of clusters.
 
 Plot the curve.
 
 <img src="images/elbow.PNG?raw=true"/>
 
-You'll notice once the number of clusters reaches 5, the reduction in the SSE begins to slow down for each increase in cluster number. So, for this exercise we will be using 5 clusters.
+You'll notice once the number of clusters reaches 5, the reduction in the SSE begins to slow down for each increase in cluster number. So, for this exercise we will be using **5 clusters**.
 
 <p>&nbsp;</p>
 
@@ -75,7 +79,7 @@ Date |	Adj Close |	daily_ret	| mean w=21	| std w=21
 
 **3σ Condition:**
 
-The condition for a given observation x to be qualified as an outlier is x > μ + 3σ or x < μ - 3σ.
+The condition for a given observation x to be qualified as an outlier is **x > μ + 3σ or x < μ - 3σ.**
 
 Plot the results:
 
@@ -89,7 +93,7 @@ You'll notice that when there are two large returns near one each other, the alg
 
 ### Detecting Outliers: scipy.stats.zscore
 
-The intuition behind Z-score is to describe any data point by finding their relationship with the Standard Deviation and Mean of the group of data points. Z-score is finding the distribution of data where mean is 0 and standard deviation is 1 i.e. normal distribution.
+The intuition behind **Z-score** is to describe any data point by finding their relationship with the Standard Deviation and Mean of the group of data points. Z-score is finding the distribution of data where mean is 0 and standard deviation is 1 i.e. normal distribution.
 
 Zscore function, compute the z score of each value in the sample, relative to the sample mean and standard deviation.
 
@@ -100,6 +104,7 @@ Z-score Formula:
 Where:
 
 μ = Mean
+
 σ = Standard Deviation
 
 <p>&nbsp;</p>
@@ -118,7 +123,6 @@ print(z)
  [0.91313389 0.58136614]
  [0.91858052 0.72495043]]
 ```
-<p>&nbsp;</p>
 
 Before removing outliers:
 
@@ -131,6 +135,7 @@ ret.shape
 After removing outliers:
 
 ```python
+# Modified Dataframe
 ret_outliers.shape
 
 (496, 2)
@@ -140,9 +145,7 @@ Plotting k-means clustering:
 
 <img src="images/kmeans.png?raw=true"/>
 
-The black "X" mark are the centroids for each cluster
-
-<p>&nbsp;</p>
+The black **"X"** marks are the **centroids** for each cluster
 
 Finanlly, describe Cluster's Return
 
