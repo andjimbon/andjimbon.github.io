@@ -24,7 +24,7 @@ for stock in sp:
     df = pd.concat(sp500_stocks,axis=1)
 ```
 
-Once stock data is into a Pandas dataframe, We are ready to start the K-Means investigation.
+Once stock data is into a Pandas dataframe, we are ready to start the K-Means investigation.
 
 ### Selecting the number of Clusters
 
@@ -40,17 +40,33 @@ You'll notice once the number of clusters reaches 5, the reduction in the SSE be
 
 Regulary, when clustering data we have to deal with outliers. An outlier is an observation point that is distant from other observations.
 
-There's a empirical rule called "3σ approach" that states almost all data lies within 3 standard deviations of the mean for a normal distribution. In fact, this rule states that within three standard deviations is 99.7% of the data.
+There's a empirical rule called **"3σ approach"** that states almost all data lies within 3 standard deviations of the mean for a normal distribution. In fact, this rule states that within three standard deviations is 99.7% of the data.
 
 Before continue, as an example we are going to identify outliers from Apple's stock returns using the 3σ approach
 
 Firs, calculate the rolling mean and standard deviation. We will use a monthly window.
 
-    "$$\n",
-    "\\sigma_p^2 =   \\text{Var}(w_1 R_1 + w_2 R_2) = \n",
-    "w_1^2 \\text{Var}(R_1) + w_2^2\\text{Var}(R_2) + 2w_1 w_2\\text{Cov}(R_1,R_2) =\n",
-    "w_1^2 \\sigma_1^2 + w_2^2\\sigma_2^2 + 2w_1 w_2\\text{Cov}(R_1,R_2), \n",
-    "$$\n",
+```python
+df2 = pd.DataFrame(web.DataReader('AAPL','yahoo','01/01/2017')['Adj Close'])
+
+window = 21
+
+df2['daily_ret'] = df2.pct_change()
+
+df_rolling = df2[['daily_ret']].rolling(window=window).agg(['mean', 'std'])
+```
+
+Date |	Adj Close |	daily_ret	| mean w=21	| std w=21	
+----|----|----|----|----|			
+2020-04-13	| 273.250000 |	0.019628	| 0.006123	| 0.056867
+2020-04-14	| 287.049988 |	0.050503	| 0.002823	| 0.051718 
+
+
+"$$\n",
+"\\sigma_p^2 =   \\text{Var}(w_1 R_1 + w_2 R_2) = \n",
+"w_1^2 \\text{Var}(R_1) + w_2^2\\text{Var}(R_2) + 2w_1 w_2\\text{Cov}(R_1,R_2) =\n",
+"w_1^2 \\sigma_1^2 + w_2^2\\sigma_2^2 + 2w_1 w_2\\text{Cov}(R_1,R_2), \n",
+"$$\n",
 
 
 <img src="images/outl.png?raw=true"/>
