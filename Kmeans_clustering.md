@@ -68,9 +68,6 @@ df2['daily_ret'] = df2.pct_change()
 df_rolling = df2[['daily_ret']].rolling(window=window).agg(['mean', 'std'])
 ```
 
-<pre class="EnlighterJSRAW" data-enlighter-theme="atomic" data-enlighter-language="python">
-df2['daily_ret'] = df2.pct_change()</pre>
-
 Output:
 
 Date |	Adj Close |	daily_ret	| mean w=21	| std w=21	
