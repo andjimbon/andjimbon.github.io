@@ -10,7 +10,7 @@
 
 <img src="images/first_diff.png?raw=true"/>
 
-<img src="images/dtrendf.png?raw=true"/>
+<img src="images/dtrend.png?raw=true"/>
 
 <img src="images/decomposition.png?raw=true"/>
 
