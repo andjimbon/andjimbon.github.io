@@ -35,7 +35,7 @@ A confusion matrix is a table that used to describe the performance of a classif
  
 Plot the Matrix.
 
-<img src="images/conf_matrix.png?raw=true"/>
+<img src="images/c_matrix.png?raw=true"/>
 
  
 If we take the number three as an example, the model predicted correctly 42/44 observations. Only two observations were classified as 3 when actually they were a 9.
