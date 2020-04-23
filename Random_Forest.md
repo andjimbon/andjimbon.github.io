@@ -26,18 +26,19 @@ For this project, we will use 360 handwritten numbers for testing and use 20 est
 
 **Accuracy**
 
-Once we train the model, we get a score of ~ 0.975. Not bad.
+Once we train the model, we get a score of **~ 0.975**. Not bad.
 
 <p>&nbsp;<\p>
 
 #### Confusion Matrix
 
- A confusion matrix is a table that used to describe the performance of a classification model on a set of test data for which the true values are known. It allows the visualization of the performance of an algorithm.
+A confusion matrix is a table that used to describe the performance of a classification model on a set of test data for which the true values are known. It allows the visualization of the performance of an algorithm.
  
- Plot the Matrix.
+Plot the Matrix.
 
 <img src="images/conf_matrix.png?raw=true"/>
 
+ 
 If we take the number three as an example, the model predicted correctly 42/44 observations. Only two observations were classified as 3 when actually they were a 9.
 
 
