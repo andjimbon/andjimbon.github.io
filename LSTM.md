@@ -2,7 +2,7 @@
 
 <p style="font-size:13px">Click <a href="https://github.com/andjimbon/LSTM-Stock-Prediction/blob/master/Ecopetrol_Stock_Forecasting_LSTM.ipynb">Here</a> to see Code</p>
 
-**Proeject Description:** Employing neural networks to approach financial time series and trying to make predictions of the price movements
+**Proeject Description:** Employing neural networks to approach financial time series and trying to make predictions of the price movements.
 
 One special type of neural networks is a Long Short-Term Memory (LSTM), an artificial recurrent neural network (RNN) architecture extremely powerful for time series modelling. In a simple way, LSTM predictions are always conditioned by the past experience of the network’s inputs.
 
