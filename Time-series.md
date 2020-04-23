@@ -39,8 +39,9 @@ Stationarity is a statistical assumption that a time-series has:
 * Autocovariance does not depend on time
 
 
-Clearly, the pajamas timse-serie doesn't have a constant mean over time.
+Clearly, the pajamas time-serie doesn't have a constant mean over time.
 
+<p>&nbsp;</p>
 
 #### Testing for Stationarity
 
