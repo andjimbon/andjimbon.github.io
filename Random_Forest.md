@@ -28,7 +28,6 @@ For this project, we will use 360 handwritten numbers for testing and use 20 est
 
 Once we train the model, we get a score of **~ 0.975**. Not bad.
 
-<p>&nbsp;<\p>
 
 #### Confusion Matrix
 
