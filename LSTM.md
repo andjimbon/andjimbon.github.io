@@ -103,3 +103,9 @@ Real:  3140.0
 Prediction: 3191.60
 Difference: 1.64%
 ```
+
+<p>&nbsp;</p>
+
+<img src="images/portada_lstm2.png?raw=true"/>
+
+
