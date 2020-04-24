@@ -28,6 +28,8 @@ First calculate the max peaks:
 
 <img src="images/eco_max.png?raw=true"/>
 
+<p>&nbsp;</p>
+
 Then, plot the percentage of losses. In this case  there's a huge loose within 2014 and 2016. In 2016 reaches the max drawdown:
 
 <img src="images/eco_drawdown.png?raw=true"/>
