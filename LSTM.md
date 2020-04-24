@@ -1,4 +1,4 @@
-## Neuronal Networks to Predict Stock Price
+## Neural Networks to Predict Stock Price
 
 <p style="font-size:13px">Click <a href="https://github.com/andjimbon/LSTM-Stock-Prediction/blob/master/Stock_Prediction_LSTM_(RNN).ipynb">Here</a> to see Code</p>
 
@@ -43,7 +43,7 @@ min_max_scaler = preprocessing.MinMaxScaler()
 data['Close'] = min_max_scaler.fit_transform(data['Close'].values.reshape(-1,1))
 ```
 
-Then, reshape data. In this case, a 3D array:
+Then, reshape data to obtain a 3D array:
 
 ```pyhon
 scale_df.shape
