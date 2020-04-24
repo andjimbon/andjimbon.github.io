@@ -10,9 +10,13 @@ Using LSTMs to predict stock prices can actually produce impressive results comp
 
 We will be using Ecopetrol Stock as an example. Please to get the stock price data, you have to use [Investpy](https://investpy.readthedocs.io/usage.html) library.
 
+<p>&nbsp;</p>
+
 #### Get Data
 
 <img src="images/lstm_eco.png?raw=true"/>
+
+<p>&nbsp;</p>
 
 #### Drawdown Analysis
 
@@ -30,6 +34,8 @@ Then, plot the percentage of losses. In this case  there's a huge loose within 2
 Max drawdown: -78.0%
 Date max drawdown: 2016-01-18 00:00:00
 ```
+
+<p>&nbsp;</p>
 
 ### Dive into the LSTM Model
 
@@ -59,6 +65,8 @@ model.add(Dense(25))
 model.add(Dense(1))
 ```
 
+<p>&nbsp;</p>
+
 The MSE of the model is **~ 0.000245**. Not bad at all.
 
 ```python
@@ -69,6 +77,7 @@ print("mean square error = ", mse)
 278/278 [==============================] - 0s 1ms/step
 mean square error =  [0.0002446458815251939, 0.0]
 ```
+<p>&nbsp;</p>
 
 Plot the test and predicted values:
 
@@ -77,6 +86,7 @@ Plot the test and predicted values:
 
 The prediction fitted quite well the actual stock movements, although there are some gaps between predicted and true movements
 
+<p>&nbsp;</p>
 
 #### Next day prediction
 
