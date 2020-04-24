@@ -8,13 +8,15 @@ One special type of neural networks is a Long Short-Term Memory (LSTM), an artif
 
 Using LSTMs to predict stock prices can actually produce impressive results compared to other, more traditional statistical methods of technical analysis.
 
-We will be using Ecopetrol Stock as an example. Please to get the stock price data, you have to use [Investpy](https://investpy.readthedocs.io/usage.html) library.
+We will be using Ecopetrol Stock as an example. You can get the stock price data installing [Investpy](https://investpy.readthedocs.io/usage.html) library.
 
 <p>&nbsp;</p>
 
 #### Get Data
 
 <img src="images/lstm_eco.png?raw=true"/>
+
+Before to run the LSTM model, we will take a look at the time-serie and calculate its drawdown over time. 
 
 <p>&nbsp;</p>
 
