@@ -8,13 +8,13 @@ We will be using statsmodels libraries to achieve this goal.
 
 #### Get data from Google Trends
 
-As an example, we will use "pajamas" and "bikinis" worldwide searchs. You can get this data directly from [Google Trends.](https://trends.google.com/trends/?geo=US)
+As an example, we will use "pajamas" and "bikinis" worldwide Google searches. You can get this data directly from [Google Trends.](https://trends.google.com/trends/?geo=US)
 
 Plot series:
 
 <img src="images/trends.png?raw=true"/>
 
-Please observe how these series complements one each other. While people search "pajamas" in google, searches for "bikinis" are no longer popular, and viceversa. There is a seasonal component, obviously.
+Observe how these series complements one each other. While people search "pajamas" in google, searches for "bikinis" are no longer popular, and viceversa. There is a seasonal component, obviously.
 
 <p>&nbsp;</p>
 
