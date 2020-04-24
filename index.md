@@ -7,7 +7,7 @@
 
 <p style="font-size:13px">Click <a href="https://github.com/andjimbon/LSTM-Stock-Prediction/blob/master/Stock_Prediction_LSTM_(RNN).ipynb">Here</a> to see Code</p>
 
-<img src="images/portada_lstm.png?raw=true"/>
+<img src="images/portada_lstm2.png?raw=true"/>
 
 ---
 [2. Forecasting Google Searches Time Series with SARIMAX](/Time-series.md)
