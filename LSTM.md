@@ -1,6 +1,6 @@
 ## Neuronal Networks to Predict Stock Price
 
-<p style="font-size:13px">Click <a href="https://github.com/andjimbon/LSTM-Stock-Prediction/blob/master/Ecopetrol_Stock_Forecasting_LSTM.ipynb">Here</a> to see Code</p>
+<p style="font-size:13px">Click <a href="https://github.com/andjimbon/LSTM-Stock-Prediction/blob/master/Stock_Prediction_LSTM_(RNN).ipynb">Here</a> to see Code</p>
 
 **Proeject Description:** Employing neural networks to approach financial time series and trying to make predictions of the price movements.
 
@@ -38,37 +38,41 @@ The model uses historical data from the past 6 years. To train the model, 80% of
 First, we have to normalize the close prices:
 
 ```python
-scaler = MinMaxScaler(feature_range=(0,1))
-scaled_price = scaler.fit_transform(close_price)
+data = df.filter(['Close']).copy()
+min_max_scaler = preprocessing.MinMaxScaler()
+data['Close'] = min_max_scaler.fit_transform(data['Close'].values.reshape(-1,1))
 ```
 
-Then, reshape data:
+Then, reshape data. In this case, a 3D array:
 
 ```pyhon
-x_train = np.reshape(x_train, (x_train.shape[0], x_train.shape[1], 1))
-x_train.shape
+scale_df.shape
+(1391, 91, 1)
 ```
-And set the model parameters:
+And set the model parameters and run it. It may take a few minutes running depending the number of epochs that you set:
 
 ```python
 model = Sequential()
-model.add(LSTM(50, return_sequences=True, input_shape= (x_train.shape[1], 1)))
+model.add(LSTM(50, return_sequences=True, input_shape= (X_train.shape[1], X_train.shape[2])))
 model.add(LSTM(50, return_sequences= False))
 model.add(Dense(25))
 model.add(Dense(1))
 ```
 
-Compile and run the model:
+The MSE of the model is **~ 0.000245**. Not bad at all.
 
 ```python
-model.compile(optimizer='adam', loss='mean_squared_error')
+# Mean Square Error
+mse = model.evaluate(X_test, y_test)
+print("mean square error = ", mse)
 
-model.fit(x_train, y_train, batch_size=1, epochs=30)
+278/278 [==============================] - 0s 1ms/step
+mean square error =  [0.0002446458815251939, 0.0]
 ```
 
 Plot the test and predicted values:
 
-<img src="images/lstm_portada.png?raw=true"/>
+<img src="images/portada_lstm.png?raw=true"/>
 
 
 The prediction fitted quite well the actual stock movements, although there are some gaps between predicted and true movements
@@ -76,12 +80,12 @@ The prediction fitted quite well the actual stock movements, although there are 
 
 #### Next day prediction
 
-If we want to check this model, we just need to pass the next value to predict. We got this:
+Now, if we want to predict next day close price, just put into the model the next value to predict. (must be a 3D numpy array).
 
 ```python
 # Real Close Price vs. Prediction: 
 
 Real:  3140.0
-Prediction: 3108.30
-Difference: -1.01%
+Prediction: 3191.60
+Difference: 1.64%
 ```
