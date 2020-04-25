@@ -121,6 +121,8 @@ model.add(Dense(1))
 
 The prediction fitted quite well the actual stock movements, and the MSE it's lower than the previous model: **~0.00039147**.
 
+<p>&nbsp;</p>
+
 #### Next Day Prediction
 
 Let's predict the next day close price:
