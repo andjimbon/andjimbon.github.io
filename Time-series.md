@@ -1,4 +1,4 @@
-## Forecasting Google Searchs 
+## Forecasting Google Searches 
 
 <p style="font-size:13px">Click <a href="https://github.com/andjimbon/Time-Series-Analysis-and-Forecasting/blob/master/Google_Trends_Time_Series_Analysis_SARIMAX.ipynb">Here </a>to see Code</p>
 
