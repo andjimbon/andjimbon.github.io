@@ -87,7 +87,7 @@ Let's do some predictions and plot them:
 
 <img src="images/portada_lstm2.png?raw=true"/>
 
-As you can see, the black line follow the correctly the price movements, however there are some gaps between predicted and true movements. The performance can certainly be improve by further tuning the model
+As you can see, the black line follow correctly the price movements, however there are some gaps between predicted and true movements. The performance can certainly be improve by further tuning the model
 
 <p>&nbsp;</p>
 
