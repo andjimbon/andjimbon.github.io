@@ -53,6 +53,8 @@ In this section, there are two parts: In the first part (Model 1), we will set t
 
 The model uses historical data from the past 6 years. To train the model, 80% of this data will be used, i.e. daily closing prices. At the end, we will check how well would the model have predicted the stock price for the last 90 days, and finally, we will predict the next day close price and compare it to real close price.
 
+<p>&nbsp;</p>
+
 #### Model 1
 
 First, we have to normalize the close prices:
@@ -85,11 +87,11 @@ Let's do some predictions and plot them:
 
 <img src="images/portada_lstm2.png?raw=true"/>
 
-<p>&nbsp;</p>
-
 As you can see, the black line follow the correctly the price movements, however there are some gaps between predicted and true movements. The performance can certainly be improve by further tuning the model
 
 <p>&nbsp;</p>
+
+#### Next Day Prediction
 
 Let's predict the next day close price. Remember that the model haven't been trained with this new date:
 
@@ -117,9 +119,9 @@ model.add(Dense(1))
 
 <img src="images/portada_lstm.png?raw=true"/>
 
-<p>&nbsp;</p>
-
 The prediction fitted quite well the actual stock movements, and the MSE it's lower than the previous model: **~0.00039147**.
+
+#### Next Day Prediction
 
 Let's predict the next day close price:
 
@@ -130,7 +132,6 @@ Real:  3140.0
 Prediction: 3159.95
 Difference: 0.64%
 ```
-<p>&nbsp;</p>
 
 Really close!!
 
