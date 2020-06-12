@@ -11,7 +11,7 @@
 ![](/images/gif4.gif){:height="100%" width="100%"}  
 
 ## Selecting Named Ranges
-![](/images/Ranges.PNG)
+![](/images/ranges.PNG)
 
 ## Paste Values and Formulas from Python 
 ![](/images/gif1.gif){:height="100%" width="100%"}  
