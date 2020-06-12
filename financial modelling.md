@@ -8,6 +8,8 @@
 
 ![](/images/gif3.gif){:height="100%" width="100%"}  
 
+## Cells contain formulas with the name of the variables
 ![](/images/cells formula.PNG)
 
+## Balance Check
 ![](/images/balance.PNG)
