@@ -9,7 +9,7 @@
 ## Automatic generation of Ranges
 ![](/images/gif4.gif){:height="100%" width="100%"}  
 
-## Picking Named Ranges
+## Selecting Named Ranges
 ![](/images/Ranges.PNG)
 
 ## Paste Values and Formulas from Python 
