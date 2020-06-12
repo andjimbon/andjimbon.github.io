@@ -5,6 +5,8 @@
 ---
 [1. Financial Modelling with Python and Google Sheets](/financial modelling.md)
 
+<p style="font-size:13px">Click <a href="https://github.com/andjimbon/Fn-Md/blob/master/Fn_Mod.ipynb">Here</a> to see Code</p>
+
 ![](/images/gif2.gif){:height="100%" width="100%"}  
 
 [2. Predicting Ecopetrol's Stock Price with LSTM Neural Networks](/LSTM.md)
