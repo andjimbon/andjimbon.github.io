@@ -5,7 +5,7 @@
 ---
 [1. Financial Modelling with Python and Google Sheets](/financial modelling.md)
 
-![](/images/gif3.gif){:height="100%" width="100%"}  
+![](/images/gif2.gif){:height="100%" width="100%"}  
 
 [2. Predicting Ecopetrol's Stock Price with LSTM Neural Networks](/LSTM.md)
 
