@@ -3,6 +3,9 @@
 ### Python Projects
 
 ---
+
+![](/images/gif1.gif){:height="100%" width="100%"}  
+
 [1. Predicting Ecopetrol's Stock Price with LSTM Neural Networks](/LSTM.md)
 
 <p style="font-size:13px">Click <a href="https://github.com/andjimbon/LSTM-Stock-Prediction/blob/master/Stock_Prediction_LSTM_(RNN).ipynb">Here</a> to see Code</p>
