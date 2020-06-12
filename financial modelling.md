@@ -3,7 +3,7 @@
 ## Automatic generation of Ranges
 ![](/images/gif4.gif){:height="100%" width="100%"}  
 
-## Paste Values from lines of Python code 
+## Paste Values and Formulas from Python 
 ![](/images/gif1.gif){:height="100%" width="100%"}  
 
 ![](/images/gif3.gif){:height="100%" width="100%"}  
