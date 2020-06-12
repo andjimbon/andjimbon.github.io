@@ -3,7 +3,7 @@
 ### Python Projects
 
 ---
-[1. Financial Modelling with Python and Google Sheets](/)
+[1. Financial Modelling with Python and Google Sheets](/financial modelling.md)
 
 ![](/images/gif1.gif){:height="100%" width="100%"}  
 
