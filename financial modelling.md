@@ -3,7 +3,7 @@ The aim of this project is develop a 3-statement model completely inputting hist
 
 **Advantages** of using Python & GS:
 
-* There's no need to input historical data mannually. This code uses **Scrapy** and **BS4** to read **10-K** Financial Statements from [*SEC*](https://www.sec.gov/cgi-bin/viewer?action=view&cik=320193&accession_number=0000320193-18-000145&xbrl_type=v#)
+* There's no need to input historical data mannually. This code uses **Scrapy** and **BS4** to read **10-K** Financial Statements from [<span style=“color:blue;”> SEC</span>](https://www.sec.gov/cgi-bin/viewer?action=view&cik=320193&accession_number=0000320193-18-000145&xbrl_type=v#)
 * Spreadsheet cells are **linked**. This model is robust, so any change in key variables will modify the output
 * Iterative Calcultaion. With GS, **static dataframes from Pandas** will never be a problem again
 * There are unique variables (**named ranges**): Calculation in cells shows the name of the variables, so it's really easy to follow the financial modelling
