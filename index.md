@@ -16,18 +16,18 @@
 <img src="images/portada_lstm2.png?raw=true"/>
 
 ---
-[3. Forecasting Google Searches Time Series with SARIMAX](/Time-series.md)
-
-<p style="font-size:13px">Click <a href="https://github.com/andjimbon/Time-Series-Analysis-and-Forecasting/blob/master/Google_Trends_Time_Series_Analysis_SARIMAX.ipynb">Here</a> to see Code</p>
-
-<img src="images/portada.png?raw=true"/>
-
----
-[4. Financial Analysis and Optimal Portfolio with Colombian Stocks](/Optimal_portfolio.md)
+[3. Financial Analysis and Optimal Portfolio with Colombian Stocks](/Optimal_portfolio.md)
 
 <p style="font-size:13px">Click <a href="https://github.com/andjimbon/Efficient-Frontier-for-Colombian-Stocks/blob/master/Optimal_Portfolio_with_Colombian_Stocks.ipynb">Here</a> to see Code</p>
 
 <img src="images/efficient_front.png?raw=true"/>
+
+---
+[4. Forecasting Google Searches Time Series with SARIMAX](/Time-series.md)
+
+<p style="font-size:13px">Click <a href="https://github.com/andjimbon/Time-Series-Analysis-and-Forecasting/blob/master/Google_Trends_Time_Series_Analysis_SARIMAX.ipynb">Here</a> to see Code</p>
+
+<img src="images/portada.png?raw=true"/>
 
 ---
 [5. K-Means Clustering with Real Stock Data](/Kmeans_clustering.md)
